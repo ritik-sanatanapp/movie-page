@@ -1,0 +1,11 @@
+.div-mid{
+  padding: 0 clamp(1rem, 5vw, 6.5rem);
+}
+
+@media (max-width: 768px){
+  .div-mid{
+    padding: clamp(0.75rem, 1.5vw, 1.25rem);
+    display: flex;
+    flex-direction: column;
+  }
+}

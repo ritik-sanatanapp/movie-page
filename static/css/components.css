@@ -1,0 +1,237 @@
+
+.header{
+  padding: 0 clamp(10px, 1vw, 24px);
+  display: flex;
+  align-items: center;
+  border-bottom:1px solid var(--border);
+  background: white;
+  color: black;
+  box-sizing: border-box;
+  height: clamp(15px, 10vh, 8000px);
+}
+
+.header-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  width: 100%;
+  height: 100%;
+}
+
+
+.header-logo{
+  font-family:'Cormorant Garamond',serif;
+  font-size:20px;
+  font-size: clamp(16px, 2vw, 240px);
+  display:flex;
+  align-items:center;
+  gap: clamp(4px, 1vw, 12px);
+} 
+.header-logo img{
+  height: clamp(12px, 3.5vw, 40000px);
+  width:auto;
+  display:block;
+}
+
+.header-links{
+  align-items: center;
+  display:flex;
+  gap: clamp(12px, 3vw, 4000px);
+}
+
+.header-links img{
+    height: clamp(14px, 1.5vw, 2400px);
+}
+
+#button_language_switch img{
+    height: clamp(12px, 1.5vw, 20px);
+}
+.header-links a {
+  position: relative;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: clamp(12px, 1.3vw, 1600px);
+  padding-bottom: clamp(2px, 0.4vw, 60000px);; 
+  transition: color 0.3s ease;
+}
+.header-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: clamp(1px, 0.2vw, 3000px);
+  background: #FE7A0E;
+  transition: width 0.3s ease;
+}
+
+.header-links a:hover {
+  color: var(--fg); 
+}
+
+.header-links a:hover::after {
+  width: 100%; 
+}
+
+
+
+
+
+/* ================= MOBILE OPTIMIZATION ================= */
+@media (max-width: 768px){
+
+  /* GLOBAL FIX */
+  body{
+    overflow-x:hidden;
+  }
+  
+
+/* ================= HEADER ================= */
+
+.header{
+  padding: 0 16px;              /* clean horizontal spacing */
+  height: clamp(6px, 8vh, 72px);
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--border);
+  background: #fff;
+}
+
+
+
+/* LOGO */
+.header-logo {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.header-logo img {
+  height: clamp(24px, 4vw, 30px);
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  display: block;
+}
+
+/* NAV LINKS */
+.header-links {
+  display: flex;
+  align-items: center;
+  gap: clamp(6px, 2vw, 16px);
+  flex: 0 0 auto;   /* final correct */
+}
+
+/* LINKS */
+.header-language a,
+.header-home a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: clamp(10px, 2.5vw, 12px);
+  padding: 4px 6px;
+  white-space: nowrap;
+  line-height: 1;
+  text-decoration: none;
+  color: var(--muted);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  position: relative;
+}
+
+.header-language picture {
+  display: flex;
+  align-items: center;
+}
+
+.header-language img {
+  height: 1em;
+  width: auto;
+  display: block;
+  margin-bottom:20% ;
+}
+.header-home{
+  margin-bottom: 2%;
+}
+
+
+/* ================= MOBILE EXTRA SAFETY ================= */
+
+@media (max-width: 480px){
+
+  .nav-language .nav-text{
+    display: none;  
+  }
+
+  .nav-links{
+    gap: 8px;
+  }
+
+}
+
+
+
+
+
+}
+
+.section-title{
+  letter-spacing: clamp(0.5px, 0.1vw, 2000px);
+  color: white;
+  text-transform:uppercase;
+  margin-top: clamp(20px, 4vw, 6000px);  
+  font-size: clamp(18px, 3vw, 3600px);   
+  font-weight: bold;
+  margin-bottom: clamp(5px, 1vw, 1000px);
+}
+
+.info-label{
+  font-size: clamp(10px, 1.2vw, 1600px); 
+  letter-spacing: clamp(0.5px, 0.1vw, 2000px);
+  color: white;
+  font-weight:600;
+  text-transform:uppercase;
+  margin-top: clamp(4px, 0.5vw, 800px);     
+  margin-bottom: clamp(4px, 0.5vw, 8000px);
+}
+.info-value{
+  margin-top: clamp(-600px, -0.3vw, 0px);  
+  font-size: clamp(12px, 1.2vw, 18000px);    
+  color:#FFFFFFB3;
+  line-height:1.3; 
+}
+.info-block{
+  flex:1;  
+  display:inline-block;
+  padding: clamp(4px, 1vw, 1002px) clamp(6px, 2vw, 2000px);
+  background:#FFFFFF1A;
+  border-radius: clamp(6px, 1vw, 120000px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+
+
+
+@media(max-width:786px){
+
+  .section-title{ 
+  font-size: clamp(18px, 5vw, 3600px);   
+}
+  
+.info-label{
+  font-size: clamp(10px, 3.8vw, 1600px); 
+}
+.info-value{
+  font-size: clamp(12px, 3.2vw, 18000px);     
+}
+.info-block{
+  flex:1;  
+  display:inline-block;
+  padding: clamp(4px, 1vw, 1002px) clamp(6px, 2vw, 2000px);
+  background:#FFFFFF1A;
+  border-radius: clamp(6px, 1vw, 120000px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+}

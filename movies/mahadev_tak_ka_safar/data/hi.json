@@ -1,0 +1,172 @@
+{
+  "id": "mahadev_tak_ka_safar",
+  "title": "महादेव तक का सफर",
+
+  "hero": {
+    "cover": "cover.webp",
+    "cover_low": "cover-low.webp",
+    "title_image": "title.webp",
+    "title_image_low": "title-low.webp",
+    "trailer": "https://www.youtube.com/shorts/gfJjmL6dnw8"
+  },
+
+  "trailers": [
+    {
+      "thumbnail": "teaser1.webp",
+      "thumbnail_low": "teaser1-low.webp",
+      "link": "https://www.youtube.com/shorts/3s5LiwUxvwE"
+    },
+    {
+      "thumbnail": "teaser2.webp",
+      "thumbnail_low": "teaser2-low.webp",
+      "link": "https://www.youtube.com/shorts/lNjCu1kYn0g"
+    },
+    {
+      "thumbnail": "preview.webp",
+      "thumbnail_low": "preview-low.webp",
+      "link": "https://www.youtube.com/shorts/TNiehOsGoQY"
+    },
+    {
+      "thumbnail": "trailer_song1.webp",
+      "thumbnail_low": "trailer_song1-low.webp",
+      "link": "https://www.youtube.com/shorts/Z5vaLCoAxN8"
+    },
+    {
+      "thumbnail": "trailer_song2.webp",
+      "thumbnail_low": "trailer2-low.webp",
+      "link": "https://www.youtube.com/shorts/DUCbsYw4NNA"
+    }
+  ],
+
+  "shorts": [
+    { "link": "https://www.youtube.com/embed/3s5LiwUxvwE" },
+    { "link": "https://www.youtube.com/embed/lNjCu1kYn0g" },
+    { "link": "https://www.youtube.com/embed/TNiehOsGoQY" },
+    { "link": "https://www.youtube.com/embed/Z5vaLCoAxN8" },
+    { "link": "https://www.youtube.com/embed/DUCbsYw4NNA" }
+  ],
+
+  "info": {
+    "type": "उत्साहपूर्ण, आध्यात्मिक, महाकाव्यात्मक, पौराणिक, भावनात्मक यात्रा, आस्था और मुक्ति, दृश्य रूप से समृद्ध, भारतीय, प्रेरणादायक, ड्रामा, फिल्म",
+    "audio": "हिंदी [मूल]",
+    "subtitles": "हिंदी"
+  },
+
+  "genres": [
+    "हिंदी भाषा की फिल्में",
+    "बॉलीवुड फिल्में",
+    "आध्यात्मिक ड्रामा",
+    "प्रेरणादायक फिल्में",
+    "आस्था और भक्ति",
+    "भारतीय फिल्में",
+    "महाकाव्यात्मक यात्रा",
+    "ड्रामा फिल्में"
+  ],
+
+  "screenshots": [
+    "ss1.webp", "ss1-low.webp",
+    "ss2.webp", "ss2-low.webp",
+    "ss3.webp", "ss3-low.webp",
+    "ss4.webp", "ss4-low.webp",
+    "ss5.webp", "ss5-low.webp",
+    "ss6.webp", "ss6-low.webp",
+    "ss7.webp", "ss7-low.webp",
+    "ss8.webp", "ss8-low.webp",
+    "ss9.webp", "ss9-low.webp",
+    "ss10.webp", "ss10-low.webp",
+    "ss11.webp", "ss11-low.webp",
+    "ss12.webp", "ss12-low.webp"
+  ],
+
+  "credits": [
+    {
+      "title": "निर्देशक",
+      "names": "अनीकेत कुमार | रीना वशिष्ठ"
+    },
+    {
+      "title": "निर्माता",
+      "names": "SanatanApp Private Limited"
+    },
+    {
+      "title": "लेखक",
+      "names": "रीना वशिष्ठ (कहानी एवं पटकथा)"
+    },
+    {
+      "title": "संगीत विभाग",
+      "names": "रीना वशिष्ठ | अजय मिश्रा | वैदेही गोयल"
+    },
+    {
+      "title": "संपादन विभाग",
+      "names": "उज्ज्वल शर्मा | सूरज कुमार | जतिन खोवर | रेनु चौहान"
+    },
+    {
+      "title": "निर्माण कंपनियां",
+      "names": "SanatanApp Private Limited"
+    }
+  ],
+
+  "movie": {
+    "poster": "poster.webp",
+    "poster_low": "poster-low.webp",
+    "title": "महादेव तक का सफर",
+    "genres": ["आध्यात्मिक", "ड्रामा"],
+    "year": "2026",
+    "duration": "2 घं 18 मि",
+    "rating": "U",
+    "language": "हिंदी"
+  },
+
+  "synopsis": [
+    "महादेव तक का सफर एक आत्मा की यात्रा है जो जीवन के उतार-चढ़ावों से गुजरती हुई अपने सच्चे उद्देश्य से अनजान है, फिर भी लगातार उसी की ओर खिंचती चली जाती है।",
+    "राघव के संघर्षों, संदेहों और टूटने के क्षणों के माध्यम से यह कहानी दिखाती है कि जीवन की कठिनाइयाँ केवल बाधाएँ नहीं हैं, बल्कि कर्म के बड़े चक्र का हिस्सा हैं।",
+    "यह आत्म-खोज, आस्था और नियति की एक शक्तिशाली कहानी है जहाँ यह यात्रा महादेव के साथ गहरे संबंध तक पहुँचती है।"
+  ],
+
+  "songs": [
+    {
+      "image": "Har_Har_Bhole_Shiv_Shankara.webp",
+      "image_low": "Har_Har_Bhole_Shiv_Shankara-low.webp",
+      "title": "हर हर भोले शिव शंकरा",
+      "duration": "2:37"
+    },
+    {
+      "image": "Shambhu_Shankaraaye.webp",
+      "image_low": "Shambhu_Shankaraaye-low.webp",
+      "title": "शंभु शंकराये",
+      "duration": "4:05"
+    },
+    {
+      "image": "Saath_Saath_Chalta_Raha.webp",
+      "image_low": "Saath_Saath_Chalta_Raha-low.webp",
+      "title": "साथ साथ चलता रहा",
+      "duration": "1:05"
+    },
+    {
+      "image": "Sheher_Ki_Raahon_Mein.webp",
+      "image_low": "Sheher_Ki_Raahon_Mein-low.webp",
+      "title": "शहर की राहों में",
+      "duration": "2:50"
+    }
+  ],
+
+  "reviews": [
+    {
+      "name": "आरव शर्मा",
+      "location": "दिल्ली, भारत",
+      "stars": "⭐⭐⭐⭐⭐",
+      "text": "ट्रेलर काफी दमदार था। इसने पूरी फिल्म के लिए उत्साह बढ़ा दिया।"
+    },
+    {
+      "name": "सान्वी गुप्ता",
+      "location": "गुजरात, भारत",
+      "stars": "⭐⭐⭐⭐",
+      "text": "ट्रेलर ने तुरंत ध्यान खींच लिया।"
+    },
+    {
+      "name": "आदित्य मेहता",
+      "location": "असम, भारत",
+      "stars": "⭐⭐⭐⭐⭐",
+      "text": "विजुअल्स काफी शानदार लगे।"
+    }
+  ]
+}

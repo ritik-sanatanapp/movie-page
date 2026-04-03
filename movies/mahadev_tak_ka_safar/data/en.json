@@ -1,0 +1,197 @@
+{
+  "id": "mahadev_tak_ka_safar",
+  "title": "Mahadev Tak Ka Safar",
+
+  "hero": {
+    "cover": "cover.webp",
+    "cover_low": "cover-low.webp",
+    "title_image": "title.webp",
+    "title_image_low": "title-low.webp",
+    "trailer": "https://www.youtube.com/shorts/gfJjmL6dnw8"
+  },
+
+  "trailers": [
+    {
+      "thumbnail": "teaser1.webp",
+      "thumbnail_low": "teaser1-low.webp",
+      "link": "https://www.youtube.com/shorts/3s5LiwUxvwE"
+    },
+    {
+      "thumbnail": "teaser2.webp",
+      "thumbnail_low": "teaser2-low.webp",
+      "link": "https://www.youtube.com/shorts/lNjCu1kYn0g"
+    },
+    {
+      "thumbnail": "preview.webp",
+      "thumbnail_low": "preview-low.webp",
+      "link": "https://www.youtube.com/shorts/TNiehOsGoQY"
+    },
+    {
+      "thumbnail": "trailer_song1.webp",
+      "thumbnail_low": "trailer_song1-low.webp",
+      "link": "https://www.youtube.com/shorts/Z5vaLCoAxN8"
+    },
+    {
+      "thumbnail": "trailer_song2.webp",
+      "thumbnail_low": "trailer_song2-low.webp",
+      "link": "https://www.youtube.com/shorts/DUCbsYw4NNA"
+    }
+  ],
+
+  "shorts": [
+    { "link": "https://www.youtube.com/shorts/qV7A61vDhF8" },
+    { "link": "https://www.youtube.com/shorts/3s5LiwUxvwE" },
+    { "link": "https://www.youtube.com/shorts/lNjCu1kYn0g" },
+    { "link": "https://www.youtube.com/shorts/TNiehOsGoQY" },
+    { "link": "https://www.youtube.com/shorts/Z5vaLCoAxN8" },
+    { "link": "https://www.youtube.com/shorts/DUCbsYw4NNA" }
+  ],
+
+  "info": {
+    "type": "Rousing, Spiritual, Epic, Mythic, Emotional Journey, Faith & Redemption, Visually Rich, Indian, Inspirational, Drama, Movie",
+    "audio": "Hindi [Original]",
+    "subtitles": "Hindi"
+  },
+
+  "genres": [
+    "Hindi-Language Movies",
+    "Bollywood Movies",
+    "Spiritual Drama",
+    "Inspirational Movies",
+    "Faith & Devotion",
+    "Indian Movies",
+    "Epic Journey",
+    "Drama Movies"
+  ],
+
+  "screenshots": [
+    "ss1.webp", "ss1-low.webp",
+    "ss2.webp", "ss2-low.webp",
+    "ss3.webp", "ss3-low.webp",
+    "ss4.webp", "ss4-low.webp",
+    "ss5.webp", "ss5-low.webp",
+    "ss6.webp", "ss6-low.webp",
+    "ss7.webp", "ss7-low.webp",
+    "ss8.webp", "ss8-low.webp",
+    "ss9.webp", "ss9-low.webp",
+    "ss10.webp", "ss10-low.webp",
+    "ss11.webp", "ss11-low.webp",
+    "ss12.webp", "ss12-low.webp"
+  ],
+  
+  "credits": [
+    {
+      "title": "Directors",
+      "names": "Aniket Kumar | Reena Vashist"
+    },
+    {
+      "title": "Producers",
+      "names": "SanatanApp Private Limited"
+    },
+    {
+      "title": "Writer",
+      "names": "Reena Vashist (Story & Screenplay)"
+    },
+    {
+      "title": "Music Department",
+      "names": "Reena Vashist | Ajay Mishra | Vaidehi Goyal"
+    },
+    {
+      "title": "Editing Department",
+      "names": "Ujjwal Sharma | Suraj Kumar | Jatin Khowar | Renu Chauhan"
+    },
+    {
+      "title": "Production Companies",
+      "names": "SanatanApp Private Limited"
+    }
+  ],
+
+  "movie": {
+    "poster": "poster.webp",
+    "poster_low": "poster-low.webp",
+    "title": "Mahadev Tak Ka Safar",
+    "genres": ["Spiritual", "Drama"],
+    "year": "2026",
+    "duration": "2h 18m",
+    "rating": "U",
+    "language": "Hindi"
+  },
+
+  "synopsis": [
+    "Mahadev Tak Ka Safar is the journey of a soul moving through the twists and turns of life, unaware of its true purpose, yet constantly being drawn toward it. Through Raghav’s struggles, doubts, and breaking points, the story unfolds how life’s hardships are not just obstacles, but a part of the greater cycle of karma shaping his path.",
+            "As he faces pain, loss, and unanswered questions, he begins to realize that every experience is guiding him toward a deeper truth. In his darkest moments, the silent presence of Mahadev becomes his strength sometimes as a test, sometimes as a sign, and sometimes as a guiding force he cannot ignore.",
+            "It is a powerful tale of self-discovery, karma, and faith where, in the end, Raghav understands that his journey was never random, but a path leading him to his true identity and his eternal connection with Mahadev."
+          ],
+
+  "songs": [
+    {
+      "image": "Har_Har_Bhole_Shiv_Shankara.webp",
+      "image_low": "Har_Har_Bhole_Shiv_Shankara-low.webp",
+      "title": "Har Har Bhole Shiv Shankara",
+      "duration": "2:37"
+    },
+    {
+      "image": "Shambhu_Shankaraaye.webp",
+      "image_low": "Shambhu_Shankaraaye-low.webp",
+      "title": "Shambhu Shankaraaye",
+      "duration": "4:05"
+    },
+    {
+      "image": "Saath_Saath_Chalta_Raha.webp",
+      "image_low": "Saath_Saath_Chalta_Raha-low.webp",
+      "title": "Saath Saath Chalta Raha",
+      "duration": "1:05"
+    },
+    {
+      "image": "Sheher_Ki_Raahon_Mein.webp",
+      "image_low": "Sheher_Ki_Raahon_Mein-low.webp",
+      "title": "Sheher Ki Raahon Mein",
+      "duration": "2:50"
+    }
+  ],
+
+  "reviews": [
+    {
+          "name": "Aarav Sharma",
+          "location": "Delhi, India",
+          "stars": "⭐⭐⭐⭐⭐",
+          "text": "Damn, that trailer was intense. It really builds the hype, and now I’m genuinely excited to see how the full story unfolds."
+        },
+        {
+          "name": "Saanvi Gupta",
+          "location": "Gujarat, India",
+          "stars": "⭐⭐⭐⭐",
+          "text": "The trailer grabbed my attention instantly. Looks like it’ll have a lot of emotional ups and downs."
+        },
+        {
+          "name": "Aditya Mehta",
+          "location": "Assam, India",
+          "stars": "⭐⭐⭐⭐⭐",
+          "text": "Really impressed by the visuals. The trailer has some strong, intense scenes that make it exciting to watch."
+        },
+        {
+          "name": "Ritik Sharma",
+          "location": "Gujarat, India",
+          "stars": "⭐⭐⭐⭐   ",
+          "text": "That trailer got me interested. It feels more focused on the story and emotions, and it actually leaves you wanting to know more."
+        },
+        {
+          "name": "Rahul Mishra",
+          "location": "Himalya, India",
+          "stars": "⭐⭐⭐⭐⭐",
+          "text": "It’s one of those trailers that quietly pulls you in. Looks like the story and emotions will take the lead here."
+        },
+        {
+          "name": "Ajay Mishra",
+          "location": "Bihar, India",
+          "stars": "⭐⭐⭐⭐ ",
+          "text": "Engaging trailer with strong vibes. Looks promising and worth watching!"
+        },
+        {
+          "name": "Diya Kapoor",
+          "location": "Delhi, India",
+          "stars": "⭐⭐⭐⭐⭐",
+          "text": "Damn, this looks so good! The trailer had me hooked right away. Definitely watching this on day one."
+        }
+  ]
+}
