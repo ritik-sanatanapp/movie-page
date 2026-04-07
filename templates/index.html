@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ movie.title }}</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sections.css') }}">    
+</head>
+
+<body>
+
+
+<div 
+  class="bg-blur"
+  style="
+    --bg-desktop: url('{{ url_for('static', filename='movies/' + movie.id + '/images/high-res/' + movie.hero.cover) }}');
+    --bg-mobile: url('{{ url_for('static', filename='movies/' + movie.id + '/images/low-res/' + movie.hero.cover) }}');
+  ">
+</div>
+
+<header class="header">
+  <div class="header-inner">
+    <!-- LOGO -->
+    <div class="header-logo">
+      <picture>
+        <source 
+          media="(max-width: 768px)" 
+          srcset="{{ url_for('static', filename='common/images/' + common.site.logo) }}">
+        <img 
+          src="{{ url_for('static', filename='common/images/' + common.site.logo) }}" 
+          alt="logo">
+      </picture>
+    </div>
+
+    <!-- NAV -->
+    <nav class="header-links">
+      <div class="header-language">
+        <a href="{{ request.path }}?lang={{ 'hi' if lang == 'en' else 'en' }}">
+          {{ common.site.language_button.text[lang] }}
+          <picture>
+            <source 
+              media="(max-width: 768px)" 
+              srcset="{{ url_for('static', filename='common/images/' + common.site.language_button.icon) }}">
+            <img 
+              src="{{ url_for('static', filename='common/images/' + common.site.language_button.icon) }}" 
+              alt="language icon">
+          </picture>
+        </a>
+      </div>
+      <!-- HOME -->
+      <div class="header-home">
+        <a href="{{ common.site.home_link }}" class="home">
+          {{ "Home" if lang == "en" else "होम" }}
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+
+
+
+
+<div class="trailer-container">
+  <div class="trailer-image">
+    <picture>
+      <!-- Mobile -->
+      <source 
+        media="(max-width: 768px)" 
+        srcset="{{ url_for('static', filename='movies/' + movie.id + '/images/low-res/' + movie.hero.cover) }}">
+      <!-- Desktop -->
+      <img 
+        src="{{ url_for('static', filename='movies/' + movie.id + '/images/high-res/' + movie.hero.cover) }}" 
+        alt="{{ movie.title[lang] }} Hero Cover"
+        loading="lazy">
+    </picture>
+    <picture>
+      <!-- Mobile -->
+      <source 
+        media="(max-width: 768px)" 
+        srcset="{{ url_for('static', filename='movies/' + movie.id + '/images/low-res/' + movie.hero.title_image) }}">
+      <!-- Desktop -->
+      <img 
+        src="{{ url_for('static', filename='movies/' + movie.id + '/images/high-res/' + movie.hero.title_image) }}"
+        class="trailer-overlay"
+        alt="{{ movie.title[lang] }} Title Image"
+        loading="lazy">
+    </picture>
+    <div class="trailer-watchnow">
+      <div class="trailer-watchnow-title">
+        {{ "Watch Now" if lang == "en" else "अभी देखें" }}
+      </div>
+      <div class="trailer-watchnow-images">
+        <!-- ANDROID -->
+        <div class="trailer-watchnow-android">
+          <a href="{{ common.stream.google_play.link }}" target="_blank">
+            <picture>
+              <source 
+                media="(max-width: 768px)" 
+                srcset="{{ url_for('static', filename='common/images/' + common.stream.google_play.image) }}">
+            
+              <img 
+                src="{{ url_for('static', filename='common/images/' + common.stream.google_play.image) }}" 
+                alt="Google Play">
+            </picture>
+          </a>
+        </div>
+        <!-- IOS -->
+        <div class="trailer-watchnow-ios">
+          <a href="{{ common.stream.app_store.link }}" target="_blank">
+            <picture>
+              <source 
+                media="(max-width: 768px)" 
+                srcset="{{ url_for('static', filename='common/images/' + common.stream.app_store.image) }}">    
+              <img 
+                src="{{ url_for('static', filename='common/images/' + common.stream.app_store.image) }}" 
+                alt="App Store">
+            </picture>
+          </a>
+        </div>
+      </div>
+      <div class="trailer-watchnow-below">
+        {{ "Watch with Sanatan VIP+ Membership" if lang == "en" else "Sanatan VIP+ सदस्यता के साथ देखें" }}
+      </div>
+    </div>
+    <div class="trailer-watchnow-button">
+      <button id="trailer-watchnow-button">
+        {{ "Watch Now" if lang == "en" else "अभी देखें" }}
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<div class="div-mid">
+
+<div class="section-title">
+  {{ "Trailers & Clips" if lang == "en" else "ट्रेलर्स और क्लिप्स" }}
+</div>
+<div class="shorts-wrapper">
+  <div class="shorts-list">
+
+    {% for short in movie.shorts %}
+      {% set id = short.link.split('/')[-1].split('?')[0] %}
+
+      <div class="shorts-item">
+        <iframe
+          class="yt-player"
+          src="https://www.youtube.com/embed/{{ id }}?enablejsapi=1&modestbranding=1&rel=0&controls=1"
+          title="Short {{ loop.index }}"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    {% endfor %}
+
+  </div>
+</div>
+
+
+
+<!-- <div class="section-title">
+  {{ "Trailers & Clips" if lang == "en" else "ट्रेलर्स और क्लिप्स" }}
+</div>
+
+<div class="shorts-wrapper">
+  <div class="shorts-list">
+
+    {% for short in movie.shorts %}
+      {% set id = short.link.split('/')[-1].split('?')[0] %}
+
+      <div class="shorts-item">
+        <iframe
+          src="https://www.youtube.com/embed/{{ id }}?modestbranding=1&rel=0&controls=1"
+          title="Short {{ loop.index }}"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    {% endfor %}
+
+  </div>
+</div> -->
+
+
+
+
+
+
+
+
+<div class="title-section">
+
+  <div class="poster">
+    <picture>
+      <source 
+        media="(max-width: 768px)" 
+        srcset="{{ url_for('static', filename='movies/' + movie.id + '/images/low-res/' + movie.movie.poster) }}">
+
+      <img 
+        src="{{ url_for('static', filename='movies/' + movie.id + '/images/high-res/' + movie.movie.poster) }}" 
+        alt="Poster">
+    </picture>
+  </div>
+
+  <div class="movie-text">
+    <h1>{{ movie.movie.title}}</h1>
+    <div class="hero-right">
+      <div class="genre-tags">
+        {% for genre in movie.movie.genres %}
+          <span class="genre {% if loop.first %}primary{% else %}secondary{% endif %}">
+            {{ genre}}
+          </span>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="movie-meta">
+      <span>{{ movie.movie.year }}</span><div class="dot"></div>
+      <span>{{ movie.movie.duration}}</span><div class="dot"></div>
+      <span>{{ movie.movie.rating }}</span><div class="dot"></div>
+      <span>{{ movie.movie.language}}</span>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+<div class="synopsis-section">
+
+  <div class="section-title">
+    {{ "Summary" if lang == "en" else "कहानी" }}
+  </div>
+
+  <div class="synopsis">
+
+    {% for paragraph in movie.synopsis %}
+      <p class="synopsis-text">{{ paragraph }}</p>
+    {% endfor %}
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="section-title">More Details</div>
+<div class="info-row">
+
+  <div class="info-block">
+    <div class="info-label">
+      {{ "This show is..." if lang == "en" else "यह शो है..." }}
+    </div>
+    <div class="info-value">
+      {{ movie.info.type }}
+    </div>
+  </div>
+
+  <div class="info-block">
+
+    <div class="info-sub-block">
+      <div class="info-label">
+        {{ "AUDIO" if lang == "en" else "ऑडियो" }}
+      </div>
+      <div class="info-value">
+        {{ movie.info.audio }}
+      </div>
+    </div>
+
+    <div class="info-sub-block">
+      <div class="info-label">
+        {{ "SUBTITLES" if lang == "en" else "सबटाइटल्स" }}
+      </div>
+      <div class="info-value">
+        {{ movie.info.subtitles }}
+      </div>
+    </div>
+
+  </div>
+
+  <div class="info-block">
+    <div class="info-label">
+      {{ "Genres" if lang == "en" else "श्रेणियाँ" }}
+    </div>
+
+    <div class="info-value">
+      {% for genre in movie.movie.genres %}
+        {{ genre }}{% if not loop.last %}, {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="section-title">
+  {{ "MOVIE SONGS" if lang == "en" else "फिल्म के गाने" }}
+</div>  
+<div class="songs">  
+  {% for song in movie.songs %}
+  <div class="song-item">
+    <div class="song-image">
+      <picture>
+        <source 
+          media="(max-width: 768px)" 
+          srcset="{{ url_for('static', filename='movies/' + movie.id + '/images/low-res/' + song.image) }}">
+        <img 
+          src="{{ url_for('static', filename='movies/' + movie.id + '/images/high-res/' + song.image) }}" 
+          alt="{{ song.title }}">
+      </picture>
+    </div>
+    <div class="song-content">
+      <p>
+        <strong>{{ "Track" if lang == "en" else "गीत" }} :</strong> 
+        {{ song.title }}
+      </p>
+      <p>
+        <strong>{{ "Playtime" if lang == "en" else "समय" }} :</strong> 
+        {{ song.duration }}
+      </p>
+    </div>
+  </div>
+  {% endfor %}
+</div> 
+
+
+
+
+<div class="section-title">
+  {{ "SCREENSHOTS" if lang == "en" else "स्क्रीनशॉट्स" }}
+</div>
+
+<div class="screenshots">
+  <div class="screenshots-wrapper">
+    <button class="ss-scroll-btn left">❮</button>
+    <div class="screenshots-list">
+      {% for i in range(0, movie.screenshots|length, 2) %}
+      <div class="screenshots-item">
+        <picture>
+          <source 
+            media="(max-width: 768px)" 
+            srcset="{{ url_for('static', filename='movies/' + movie.id + '/images/low-res/' + movie.screenshots[i]) }}">
+          <img 
+            src="{{ url_for('static', filename='movies/' + movie.id + '/images/high-res/' + movie.screenshots[i]) }}" 
+            alt="Screenshot {{ (i//2) + 1 }}">
+        </picture>
+      </div>
+      {% endfor %}
+    </div>
+    <button class="ss-scroll-btn right">❯</button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="section-title">{{ "Stream Now" if lang == "en" else "अभी देखें" }}</div>
+
+<section class="stream-section">
+  <p class="info-value">
+    {{ common.stream.text[lang] }}
+  </p>
+
+  <div class="stream-buttons-wrapper">
+
+    <div class="stream-buttons-android">
+        <a href="{{ common.stream.google_play.link }}" target="_blank">
+            <picture>
+              <source 
+                media="(max-width: 768px)" 
+                srcset="{{ url_for('static', filename='common/images/' + common.stream.google_play.image) }}">
+            
+              <img 
+                src="{{ url_for('static', filename='common/images/' + common.stream.google_play.image) }}" 
+                alt="Google Play">
+            </picture>
+          </a>
+    </div>
+
+    <div class="stream-buttons-ios">
+        <a href="{{ common.stream.app_store.link }}" target="_blank">
+            <picture>
+              <source 
+                media="(max-width: 768px)" 
+                srcset="{{ url_for('static', filename='common/images/' + common.stream.app_store.image) }}">
+            
+              <img 
+                src="{{ url_for('static', filename='common/images/' + common.stream.app_store.image) }}" 
+                alt="App Store">
+            </picture>
+          </a>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="section-title">
+  {{ "Credits" if lang == "en" else "श्रेय" }}
+</div>
+
+<div class="credits">
+        {% for credit in movie.credits %}
+        
+          {% if loop.index0 % 2 == 0 %}
+          <div class="credit-row">
+          {% endif %}
+            <div class="credit-item">
+        
+              <div class="info-label">
+                {{ credit.title[lang] if credit.title is mapping else credit.title }}
+              </div>
+              <div class="info-value">
+                {{ credit.names}}
+              </div>
+            </div>
+          {% if loop.index0 % 2 == 1 or loop.last %}
+          </div>
+          {% endif %}
+        {% endfor %}
+        </div>
+
+</div>
+
+
+
+
+<div class="review">
+          <div class="section-title">
+            {{ "Audience Reviews" if lang == "en" else "दर्शकों की राय" }}
+          </div>
+          <div class="review-wrapper">
+            <button class="review-scroll-btn left">❮</button>
+            <div class="review-list">
+              {% for review in movie.reviews %}
+              <div class="review-item">
+                <div class="review-head">
+                  <div class="review-head-left">
+                    <picture>
+                      <source 
+                        media="(max-width: 768px)" 
+                        srcset="{{ url_for('static', filename='common/images/' + common.defaults.user_logo_low) }}">
+                       
+                      <img 
+                        src="{{ url_for('static', filename='common/images/' + common.defaults.user_logo) }}" 
+                        alt="user">
+                    </picture>
+                  </div>
+                  <div class="review-head-right">
+                    <div class="review-title">{{ review.name }}</div>
+                    <div class="review-location">{{ review.location }}</div>
+                  </div>
+                </div>
+                <div class="review-stars">
+                  {{ review.stars }} 
+                </div>
+                <div class="review-content">
+                  {{ review.text }}
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+            <button class="review-scroll-btn right">❯</button>
+        
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+<!-- DOWNLOAD SECTION -->
+ <section class="download-section">
+  <p>{{ "Available Now" if lang == "en" else "अब उपलब्ध" }}</p>
+  <div id="download-button-android">
+    <a href="{{ common.stream.google_play.link }}" target="_blank">
+            <picture>
+              <source 
+                media="(max-width: 768px)" 
+                srcset="{{ url_for('static', filename='common/images/' + common.stream.google_play.image) }}">
+            
+              <img 
+                src="{{ url_for('static', filename='common/images/' + common.stream.google_play.image) }}" 
+                alt="Google Play">
+            </picture>
+          </a>
+  </div>
+  <div id="download-button-ios">
+    <a href="{{ common.stream.app_store.link }}" target="_blank">
+            <picture>
+              <source 
+                media="(max-width: 768px)" 
+                srcset="{{ url_for('static', filename='common/images/' + common.stream.app_store.image) }}">
+            
+              <img 
+                src="{{ url_for('static', filename='common/images/' + common.stream.app_store.image) }}" 
+                alt="App Store">
+            </picture>
+          </a>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div id="page-links" class="footer-nav">
+    {% for link in common.footer.links %}
+      <a href="{{ link.url }}">{{ link.name[lang] }}</a>
+      {% if not loop.last %}
+        <div class="divider"></div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div id="bottom-logo-container" class="footer-logo">
+    <a href="{{ common.site.home_link }}">
+      <picture>
+        <source media="(max-width: 768px)" 
+                srcset="{{ url_for('static', filename='common/images/' + common.site.logo) }}">
+        
+        <img src="{{ url_for('static', filename='common/images/' + common.site.logo) }}"
+             alt="{{ common.site.name }} Logo" id="bottom-logo">
+      </picture>
+    </a>
+  </div>
+
+
+  <div id="follow-us-container" class="footer-social">
+    <small>{{ "Follow us on" if lang == "en" else "हमें फॉलो करें" }}</small>
+    <div id="social-media-links">
+      {% for key, social in common.social.items() %}
+          <a href="{{ social.url }}" target="_blank">
+            <picture>
+          <!-- Mobile -->
+          <source 
+            media="(max-width: 768px)" 
+            srcset="{{ url_for('static', filename='common/images/' + social.icon_low) }}">
+          <!-- Desktop -->
+          <img 
+            src="{{ url_for('static', filename='common/images/' + social.icon) }}" 
+            alt="{{ key }}">
+        </picture>
+          </a>
+      {% endfor %}
+    </div>
+  </div>
+
+  
+</footer>
+
+<div class="below-footer">
+  <small id="copyright-text" style="background: white;">© 2025 Sanatanapp Private Limited All Rights Reserved.</small>
+  </div>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+
+<script>
+let players = [];
+
+function onYouTubeIframeAPIReady() {
+  document.querySelectorAll(".yt-player").forEach((el, i) => {
+    players[i] = new YT.Player(el, {
+      events: {
+        onStateChange: onPlayerStateChange
+      }
+    });
+  });
+}
+
+function onPlayerStateChange(event) {
+  if (event.data === YT.PlayerState.PLAYING) {
+    players.forEach(player => {
+      if (player !== event.target) {
+        player.pauseVideo();
+      }
+    });
+  }
+}
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const button = document.getElementById("trailer-watchnow-button");
+
+  if (!button) return; // ✅ prevent crash
+
+  button.addEventListener("click", () => {
+    const ua = navigator.userAgent.toLowerCase();
+
+    const isAndroid = ua.includes("android");
+    const isIOS = /iphone|ipad|ipod/.test(ua);
+
+    const playStore = "{{ common.stream.google_play.link }}";
+    const appStore = "{{ common.stream.app_store.link }}";
+
+    if (isAndroid && playStore) {
+      window.open(playStore, "_blank");
+    } 
+    else if (isIOS && appStore) {
+      window.open(appStore, "_blank");
+    } 
+    else {
+      // ✅ better fallback
+      alert("Open on mobile to download the app.");
+    }
+  });
+});
+</script>
+</body>
+</html>

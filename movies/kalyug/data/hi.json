@@ -1,0 +1,170 @@
+{
+  "id": "mahadev_tak_ka_safar",
+  "title": "महादेव तक का सफर",
+
+  "hero": {
+    "cover": "cover.webp",
+    "cover_low": "cover-low.webp",
+    "title_image": "title.webp",
+    "title_image_low": "title-low.webp",
+    "trailer": "https://www.youtube.com/shorts/gfJjmL6dnw8"
+  },
+
+
+  "shorts": [
+    { "link": "https://www.youtube.com/embed/3s5LiwUxvwE" },
+    { "link": "https://www.youtube.com/embed/lNjCu1kYn0g" },
+    { "link": "https://www.youtube.com/embed/TNiehOsGoQY" },
+    { "link": "https://www.youtube.com/embed/Z5vaLCoAxN8" },
+    { "link": "https://www.youtube.com/embed/DUCbsYw4NNA" }
+  ],
+
+  "info": {
+    "type": "उत्साहपूर्ण, आध्यात्मिक, महाकाव्यात्मक, पौराणिक, भावनात्मक यात्रा, आस्था और मुक्ति, दृश्य रूप से समृद्ध, भारतीय, प्रेरणादायक, ड्रामा, फिल्म",
+    "audio": "हिंदी [मूल]",
+    "subtitles": "हिंदी"
+  },
+
+  "genres": [
+    "हिंदी भाषा की फिल्में",
+    "बॉलीवुड फिल्में",
+    "आध्यात्मिक ड्रामा",
+    "प्रेरणादायक फिल्में",
+    "आस्था और भक्ति",
+    "भारतीय फिल्में",
+    "महाकाव्यात्मक यात्रा",
+    "ड्रामा फिल्में"
+  ],
+
+  "screenshots": [
+    "ss1.webp", "ss1-low.webp",
+    "ss2.webp", "ss2-low.webp",
+    "ss3.webp", "ss3-low.webp",
+    "ss4.webp", "ss4-low.webp",
+    "ss5.webp", "ss5-low.webp",
+    "ss6.webp", "ss6-low.webp",
+    "ss7.webp", "ss7-low.webp",
+    "ss8.webp", "ss8-low.webp",
+    "ss9.webp", "ss9-low.webp",
+    "ss10.webp", "ss10-low.webp",
+    "ss11.webp", "ss11-low.webp",
+    "ss12.webp", "ss12-low.webp"
+  ],
+
+  "credits": [
+    {
+      "title": "निर्देशक",
+      "names": "अनीकेत कुमार | रीना वशिष्ठ"
+    },
+    {
+      "title": "निर्माता",
+      "names": "SanatanApp Private Limited"
+    },
+    {
+      "title": "लेखक",
+      "names": "रीना वशिष्ठ (कहानी एवं पटकथा)"
+    },
+    {
+      "title": "संगीत विभाग",
+      "names": "रीना वशिष्ठ | अजय मिश्रा | वैदेही गोयल"
+    },
+    {
+      "title": "संपादन विभाग",
+      "names": "उज्ज्वल शर्मा | सूरज कुमार | जतिन खोवर | रेनु चौहान"
+    },
+    {
+      "title": "निर्माण कंपनियां",
+      "names": "SanatanApp Private Limited"
+    }
+  ],
+
+  "movie": {
+    "poster": "poster.webp",
+    "poster_low": "poster-low.webp",
+    "title": "महादेव तक का सफर",
+    "genres": ["आध्यात्मिक", "ड्रामा"],
+    "year": "2026",
+    "duration": "2 घं 18 मि",
+    "rating": "U",
+    "language": "हिंदी"
+  },
+
+  "synopsis": [
+    "महादेव तक का सफर एक आत्मा की गहन यात्रा है, जो जीवन के उतार-चढ़ाव से गुजरते हुए अपने असली उद्देश्य की ओर खिंचती है। राघव के संघर्ष, संदेह और चुनौतियों के माध्यम से कहानी यह दिखाती है कि जीवन की कठिनाइयाँ सिर्फ बाधाएँ नहीं, बल्कि कर्म के उस महान चक्र का हिस्सा हैं जो उसके जीवन को आकार देता है।",
+    "दर्द, नुकसान और अनुत्तरित सवालों का सामना करते हुए, राघव समझता है कि हर अनुभव उसे गहरे सत्य की ओर ले जा रहा है। सबसे कठिन समय में भी महादेव की मौन उपस्थिति उसकी ताकत बनती है—कभी परीक्षा के रूप में, कभी संकेत के रूप में, और कभी मार्गदर्शक शक्ति के रूप में जिसे वह नजरअंदाज नहीं कर सकता।",
+    "यह एक प्रेरक भारतीय फिल्म की कहानी है, जिसमें आत्म-खोज, कर्म और विश्वास की शक्ति दिखाई गई है। अंत में, राघव समझता है कि उसकी यात्रा कभी संयोग नहीं थी, बल्कि यह उसे उसकी असली पहचान और महादेव के साथ शाश्वत संबंध तक ले जाने वाला मार्ग थी।"
+  ],
+
+  "songs": [
+    {
+      "image": "Har_Har_Bhole_Shiv_Shankara.webp",
+      "image_low": "Har_Har_Bhole_Shiv_Shankara-low.webp",
+      "title": "हर हर भोले शिव शंकरा",
+      "duration": "2:37"
+    },
+    {
+      "image": "Shambhu_Shankaraaye.webp",
+      "image_low": "Shambhu_Shankaraaye-low.webp",
+      "title": "शंभु शंकराये",
+      "duration": "4:05"
+    },
+    {
+      "image": "Saath_Saath_Chalta_Raha.webp",
+      "image_low": "Saath_Saath_Chalta_Raha-low.webp",
+      "title": "साथ साथ चलता रहा",
+      "duration": "1:05"
+    },
+    {
+      "image": "Sheher_Ki_Raahon_Mein.webp",
+      "image_low": "Sheher_Ki_Raahon_Mein-low.webp",
+      "title": "शहर की राहों में",
+      "duration": "2:50"
+    }
+  ],
+
+  
+  "reviews": [
+    {
+          "name": "Aarav Sharma",
+          "location": "Delhi, India",
+          "stars": "⭐⭐⭐⭐⭐",
+          "text": "Damn, that trailer was intense. It really builds the hype, and now I’m genuinely excited to see how the full story unfolds."
+        },
+        {
+          "name": "Saanvi Gupta",
+          "location": "Gujarat, India",
+          "stars": "⭐⭐⭐⭐",
+          "text": "The trailer grabbed my attention instantly. Looks like it’ll have a lot of emotional ups and downs."
+        },
+        {
+          "name": "Aditya Mehta",
+          "location": "Assam, India",
+          "stars": "⭐⭐⭐⭐⭐",
+          "text": "Really impressed by the visuals. The trailer has some strong, intense scenes that make it exciting to watch."
+        },
+        {
+          "name": "Ritik Sharma",
+          "location": "Gujarat, India",
+          "stars": "⭐⭐⭐⭐   ",
+          "text": "That trailer got me interested. It feels more focused on the story and emotions, and it actually leaves you wanting to know more."
+        },
+        {
+          "name": "Rahul Mishra",
+          "location": "Himalya, India",
+          "stars": "⭐⭐⭐⭐⭐",
+          "text": "It’s one of those trailers that quietly pulls you in. Looks like the story and emotions will take the lead here."
+        },
+        {
+          "name": "Ajay Mishra",
+          "location": "Bihar, India",
+          "stars": "⭐⭐⭐⭐ ",
+          "text": "Engaging trailer with strong vibes. Looks promising and worth watching!"
+        },
+        {
+          "name": "Diya Kapoor",
+          "location": "Delhi, India",
+          "stars": "⭐⭐⭐⭐⭐",
+          "text": "Damn, this looks so good! The trailer had me hooked right away. Definitely watching this on day one."
+        }
+  ]
+}
