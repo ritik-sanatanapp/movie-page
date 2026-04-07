@@ -82,7 +82,7 @@
   "movie": {
     "poster": "poster.webp",
     "poster_low": "poster-low.webp",
-    "title": "Kalyug",
+    "title": "Kalyug - Ant Ka Aarambh",
     "genres": ["Spiritual", "Drama"],
     "year": "2026",
     "duration": "0h 51m",
@@ -98,31 +98,36 @@
 
   "songs": [
     {
-      "image": "Har_Har_Bhole_Shiv_Shankara.webp",
-      "image_low": "Har_Har_Bhole_Shiv_Shankara-low.webp",
-      "title": "Har Har Bhole Shiv Shankara",
-      "duration": "2:37"
+      "image": "nazar_jo_thahri_shyam_par.webp",
+      "image_low": "nazar_jo_thahri_shyam_par-low.webp",
+      "title": "Nazar Jo Thahri Shyam Par",
+      "duration": "3:39"
     },
     {
-      "image": "Shambhu_Shankaraaye.webp",
-      "image_low": "Shambhu_Shankaraaye-low.webp",
-      "title": "Shambhu Shankaraaye",
-      "duration": "4:05"
+      "image": "jhoome_re.webp",
+      "image_low": "jhoome_re-low.webp",
+      "title": "Jhoome Re",
+      "duration": "2:05"
     },
     {
-      "image": "Saath_Saath_Chalta_Raha.webp",
-      "image_low": "Saath_Saath_Chalta_Raha-low.webp",
-      "title": "Saath Saath Chalta Raha",
-      "duration": "1:05"
+      "image": "maya_hai_badi_qatil.webp",
+      "image_low": "maya_hai_badi_qatil-low.webp",
+      "title": "Maya Hai Badi Qatil",
+      "duration": "2:15"
     },
     {
-      "image": "Sheher_Ki_Raahon_Mein.webp",
-      "image_low": "Sheher_Ki_Raahon_Mein-low.webp",
-      "title": "Sheher Ki Raahon Mein",
-      "duration": "2:50"
+      "image": "kali_anthem.webp",
+      "image_low": "kali_anthem-low.webp",
+      "title": "Kali Anthem – Yeh Ant Ka Aarambh Hai",  
+      "duration": "1:46"
+    },
+    {
+      "image": "hey_narayan_aao.webp",
+      "image_low": "hey_narayan_aao-low.webp",
+      "title": "Hey Narayan Aao",
+      "duration": "2:59"
     }
   ],
-
   "reviews": [
     {
           "name": "Aarav Sharma",

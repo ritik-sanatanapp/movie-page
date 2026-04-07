@@ -153,6 +153,7 @@
 }
 .trailer-image img {
   width: 100%;
+  height: 100%;
   display: block;
 }
 .trailer-image::after {
@@ -178,7 +179,7 @@
   top: 34%;
   left: 18%;
   transform: translate(-50%, -50%);
-  width: 38% !important;
+  width: 31% !important;
   height: auto !important;
   object-fit: contain;
 }
@@ -243,8 +244,8 @@
 @media (max-width: 768px){
 .trailer-overlay{
   position: absolute;
-  top: clamp(10%, 30vh, 33%);
-  left: clamp(20%, 50vw, 48%);
+  top: clamp(35%, 30vh, 35%);
+  left: clamp(50%, 58.5vw, 50%);
   transform: translate(-50%, -50%);
   width: clamp(100px, 85vw, 2000px) !important;
   height: auto !important;

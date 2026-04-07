@@ -97,28 +97,34 @@
 
   "songs": [
     {
-      "image": "Har_Har_Bhole_Shiv_Shankara.webp",
-      "image_low": "Har_Har_Bhole_Shiv_Shankara-low.webp",
-      "title": "हर हर भोले शिव शंकरा",
-      "duration": "2:37"
+      "image": "nazar_jo_thahri_shyam_par.webp",
+      "image_low": "nazar_jo_thahri_shyam_par-low.webp",
+      "title": "नज़र जो ठहरी श्याम पर",
+      "duration": "3:39"
     },
     {
-      "image": "Shambhu_Shankaraaye.webp",
-      "image_low": "Shambhu_Shankaraaye-low.webp",
-      "title": "शंभु शंकराये",
-      "duration": "4:05"
+      "image": "jhoome_re.webp",
+      "image_low": "jhoome_re-low.webp",
+      "title": "झूमे रे",
+      "duration": "2:05"
     },
     {
-      "image": "Saath_Saath_Chalta_Raha.webp",
-      "image_low": "Saath_Saath_Chalta_Raha-low.webp",
-      "title": "साथ साथ चलता रहा",
-      "duration": "1:05"
+      "image": "maya_hai_badi_qatil.webp",
+      "image_low": "maya_hai_badi_qatil-low.webp",
+      "title": " माया हैं बड़ी कातिल",
+      "duration": "2:15"
     },
     {
-      "image": "Sheher_Ki_Raahon_Mein.webp",
-      "image_low": "Sheher_Ki_Raahon_Mein-low.webp",
-      "title": "शहर की राहों में",
-      "duration": "2:50"
+      "image": "kali_anthem.webp",
+      "image_low": "kali_anthem-low.webp",
+      "title": "काली एंथम – ये अंत का आरंभ है",
+      "duration": "1:46"
+    },
+    {
+      "image": "hey_narayan_aao.webp",
+      "image_low": "hey_narayan_aao-low.webp",
+      "title": "हे नारायण आओ",
+      "duration": "2:59"
     }
   ],
 
