@@ -247,7 +247,7 @@
   top: clamp(35%, 30vh, 35%);
   left: clamp(50%, 58.5vw, 50%);
   transform: translate(-50%, -50%);
-  width: clamp(100px, 85vw, 2000px) !important;
+  width: clamp(100px, 65vw, 2000px) !important;
   height: auto !important;
 }
 .trailer-item img,
