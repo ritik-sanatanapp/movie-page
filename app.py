@@ -3,6 +3,7 @@ import os
 import json
 
 
+
 app = Flask(__name__)
 MOVIES_DIR = "movies"
 
@@ -31,9 +32,8 @@ def get_lang():
 def home():
     lang = get_lang()
     common = load_common()
-    movie = load_movie("mahadev_tak_ka_safar", lang)  # default movie
+    movie = load_movie("kalyug", lang)  # default movie
     return render_template("index.html", common=common, movie=movie, lang=lang)
-
 
 # ------------------ MOVIE PAGE -------------------
 @app.route("/movie/<movie_id>")
@@ -47,7 +47,6 @@ def movie_page(movie_id):
     movie=movie,
     lang=lang
 )
-
 # ------------------ RUN --------------------------
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5050, debug=True)
