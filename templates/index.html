@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ movie.title }}</title>
-    
+    <title>{{ movie.title }}</title> 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/sections.css') }}">    
 </head>
-
 <body>
 
 
@@ -64,8 +62,6 @@
 
 
 
-
-
 <div class="trailer-container">
   <div class="trailer-image">
     <picture>
@@ -103,7 +99,6 @@
               <source 
                 media="(max-width: 768px)" 
                 srcset="{{ url_for('static', filename='common/images/' + common.stream.google_play.image) }}">
-            
               <img 
                 src="{{ url_for('static', filename='common/images/' + common.stream.google_play.image) }}" 
                 alt="Google Play">
@@ -133,21 +128,17 @@
         {{ "Watch Now" if lang == "en" else "अभी देखें" }}
       </button>
     </div>
-
   </div>
 </div>
 
 <div class="div-mid">
-
 <div class="section-title">
   {{ "Trailers & Clips" if lang == "en" else "ट्रेलर्स और क्लिप्स" }}
 </div>
 <div class="shorts-wrapper">
   <div class="shorts-list">
-
     {% for short in movie.shorts %}
       {% set id = short.link.split('/')[-1].split('?')[0] %}
-
       <div class="shorts-item">
         <iframe
           class="yt-player"
@@ -158,56 +149,21 @@
         </iframe>
       </div>
     {% endfor %}
-
   </div>
 </div>
-
-
-
-<!-- <div class="section-title">
-  {{ "Trailers & Clips" if lang == "en" else "ट्रेलर्स और क्लिप्स" }}
-</div>
-
-<div class="shorts-wrapper">
-  <div class="shorts-list">
-
-    {% for short in movie.shorts %}
-      {% set id = short.link.split('/')[-1].split('?')[0] %}
-
-      <div class="shorts-item">
-        <iframe
-          src="https://www.youtube.com/embed/{{ id }}?modestbranding=1&rel=0&controls=1"
-          title="Short {{ loop.index }}"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-    {% endfor %}
-
-  </div>
-</div> -->
-
-
-
-
-
-
 
 
 <div class="title-section">
-
   <div class="poster">
     <picture>
       <source 
         media="(max-width: 768px)" 
         srcset="{{ url_for('static', filename='movies/' + movie.id + '/images/low-res/' + movie.movie.poster) }}">
-
       <img 
         src="{{ url_for('static', filename='movies/' + movie.id + '/images/high-res/' + movie.movie.poster) }}" 
         alt="Poster">
     </picture>
   </div>
-
   <div class="movie-text">
     <h1>{{ movie.movie.title}}</h1>
     <div class="hero-right">
@@ -219,18 +175,14 @@
         {% endfor %}
       </div>
     </div>
-
     <div class="movie-meta">
       <span>{{ movie.movie.year }}</span><div class="dot"></div>
       <span>{{ movie.movie.duration}}</span><div class="dot"></div>
       <span>{{ movie.movie.rating }}</span><div class="dot"></div>
       <span>{{ movie.movie.language}}</span>
     </div>
-
   </div>
-
 </div>
-
 
 
 
@@ -238,33 +190,20 @@
 
 
 <div class="synopsis-section">
-
   <div class="section-title">
     {{ "Summary" if lang == "en" else "कहानी" }}
   </div>
-
   <div class="synopsis">
-
     {% for paragraph in movie.synopsis %}
       <p class="synopsis-text">{{ paragraph }}</p>
     {% endfor %}
-
   </div>
-
 </div>
-
-
-
-
-
-
-
 
 
 
 <div class="section-title">More Details</div>
 <div class="info-row">
-
   <div class="info-block">
     <div class="info-label">
       {{ "This show is..." if lang == "en" else "यह शो है..." }}
@@ -273,9 +212,7 @@
       {{ movie.info.type }}
     </div>
   </div>
-
   <div class="info-block">
-
     <div class="info-sub-block">
       <div class="info-label">
         {{ "AUDIO" if lang == "en" else "ऑडियो" }}
@@ -284,7 +221,6 @@
         {{ movie.info.audio }}
       </div>
     </div>
-
     <div class="info-sub-block">
       <div class="info-label">
         {{ "SUBTITLES" if lang == "en" else "सबटाइटल्स" }}
@@ -293,9 +229,7 @@
         {{ movie.info.subtitles }}
       </div>
     </div>
-
   </div>
-
   <div class="info-block">
     <div class="info-label">
       {{ "Genres" if lang == "en" else "श्रेणियाँ" }}
@@ -307,13 +241,7 @@
       {% endfor %}
     </div>
   </div>
-
 </div>
-
-
-
-
-
 
 
 
@@ -348,12 +276,9 @@
 </div> 
 
 
-
-
 <div class="section-title">
   {{ "SCREENSHOTS" if lang == "en" else "स्क्रीनशॉट्स" }}
 </div>
-
 <div class="screenshots">
   <div class="screenshots-wrapper">
     <button class="ss-scroll-btn left">❮</button>
@@ -377,20 +302,11 @@
 
 
 
-
-
-
-
-
 <div class="section-title">{{ "Stream Now" if lang == "en" else "अभी देखें" }}</div>
-
 <section class="stream-section">
   <p class="info-value">
-    {{ common.stream.text[lang] }}
-  </p>
-
+    {{ common.stream.text[lang] }}</p>
   <div class="stream-buttons-wrapper">
-
     <div class="stream-buttons-android">
         <a href="{{ common.stream.google_play.link }}" target="_blank">
             <picture>
@@ -404,7 +320,6 @@
             </picture>
           </a>
     </div>
-
     <div class="stream-buttons-ios">
         <a href="{{ common.stream.app_store.link }}" target="_blank">
             <picture>
@@ -418,17 +333,8 @@
             </picture>
           </a>
     </div>
-
   </div>
-
 </section>
-
-
-
-
-
-
-
 
 
 
@@ -460,8 +366,6 @@
         </div>
 
 </div>
-
-
 
 
 <div class="review">
@@ -503,13 +407,6 @@
         
           </div>
         </div>
-
-
-
-
-
-
-
 
 <!-- DOWNLOAD SECTION -->
  <section class="download-section">
