@@ -588,8 +588,7 @@
   border-top: 1px solid #ccc;
 }
 .song-image {
-  flex: 0 0 clamp(80px, 10vw, 12000px);    /* prevent flex items from growing/shrinking */
-  width: clamp(80px, 10vw, 1200px);      /* responsive width */
+  width: clamp(80px, 10vw, 1200px);
   height: clamp(80px, 10vw, 1200px); 
   overflow: hidden;
   border-radius: clamp(8px, 1vw, 1200px);
@@ -606,21 +605,23 @@
 }
 .song-content p {
   margin: clamp(2px, 0.3vw, 600px) 0; 
-  font-size: clamp(14px, 1.2vw, 20000px);
+  font-size: clamp(14px, 1.2vw, 200px);
   color: #fff;
 }
 
 @media( max-width:786px) {
-   .song-image {
-  width: 100%;
-  max-width: clamp(8px, 12vw, 160px);
-  height: auto;
-  border-radius: clamp(6px, 0.8vw, 12px);
-  object-fit: cover;
+  .song-image {
+  width: clamp(8px, 20vw, 1200px);      
+  height: clamp(8px, 20vw, 1200px);  
+  flex-shrink: 0; 
 }  
-.song-subtitile p {
+.song-image img {
+  width: 100%;           
+  object-fit: cover;  
+}
+.song-subtitle p {
   margin: clamp(2px, 0.3vw, 600px) 0; /* responsive top/bottom spacing */
-  font-size: clamp(14px, 4vw, 20000px);
+  font-size: clamp(14px, 4vw, 200px);
 }
 }
 
@@ -737,16 +738,9 @@
   }
   .screenshots-item{
     width:auto;
-    height: clamp(16px, 50vw, 3200px);
+    height: clamp(16px, 70vw, 3200px);
     border-radius: clamp(4px, 1.5vw, 1200px);
   }
-  .song-image img {
-  width: 100%;      
-  max-width: clamp(8px, 12vw, 1600px); 
-  height: auto;       
-  display: block;       
-  border-radius: clamp(6px, 2vw, 1200px);
-}
   .screenshots-item:hover{
     transform:none;
     box-shadow:none;
@@ -875,14 +869,13 @@
   position:absolute;
   top:50%;
   transform:translateY(-50%);
-  width: clamp(28px, 3vw, 4000px);       
-  height: clamp(28px, 3vw, 4000px); 
+  width: clamp(28px, 3vw, 400px);       
+  height: clamp(28px, 3vw, 400px); 
   border:none;
   border-radius:50%;
   background:rgba(0,0,0,0.6);
   color:white;
-  font-size: clamp(14px, 2vw, 2200px); 
-  cursor:pointer;
+  font-size: clamp(14px, 2vw, 600px); 
   display:none;
   z-index:5;
 }
@@ -891,12 +884,11 @@
 }
 .review-scroll-btn.left
 {
-  left: clamp(-1200px, -1vw, -8px);
+  left: clamp(-400px, -1vw, -8px);
 }
 .review-scroll-btn.right
 {
-  right: clamp(-1200px, -1vw, -8px);
-
+  right: clamp(-400px, -1vw, -8px);
 }
 .review-wrapper{
   position: relative;
