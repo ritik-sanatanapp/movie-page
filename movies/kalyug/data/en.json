@@ -12,12 +12,9 @@
 
 
   "shorts": [
-    { "link": "https://www.youtube.com/shorts/qV7A61vDhF8" },
-    { "link": "https://www.youtube.com/shorts/3s5LiwUxvwE" },
-    { "link": "https://www.youtube.com/shorts/lNjCu1kYn0g" },
-    { "link": "https://www.youtube.com/shorts/TNiehOsGoQY" },
-    { "link": "https://www.youtube.com/shorts/Z5vaLCoAxN8" },
-    { "link": "https://www.youtube.com/shorts/DUCbsYw4NNA" }
+    { "link": "https://www.youtube.com/shorts/Qx07YhkTIcQ" },
+    { "link": "https://www.youtube.com/shorts/ADhNtktp7Os" },
+    { "link": "https://www.youtube.com/shorts/1ZTms65fwrc" }
   ],
 
   "info": {
@@ -49,13 +46,21 @@
     "ss9.webp", "ss9-low.webp",
     "ss10.webp", "ss10-low.webp",
     "ss11.webp", "ss11-low.webp",
-    "ss12.webp", "ss12-low.webp"
+    "ss12.webp", "ss12-low.webp",
+    "ss13.webp", "ss13-low.webp",
+    "ss14.webp", "ss14-low.webp",
+    "ss15.webp", "ss15-low.webp",
+    "ss16.webp", "ss16-low.webp",
+    "ss17.webp", "ss17-low.webp",
+    "ss18.webp", "ss18-low.webp",
+    "ss19.webp", "ss19-low.webp",
+    "ss20.webp", "ss20-low.webp"
   ],
   
   "credits": [
     {
       "title": "Directors",
-      "names": "Aniket Kumar | Reena Vashist"
+      "names": "Anshuman Kumar | Krishan Mohan"
     },
     {
       "title": "Producers",
@@ -63,15 +68,15 @@
     },
     {
       "title": "Writer",
-      "names": "Reena Vashist (Story & Screenplay)"
+      "names": "Krishan Mohan (Story & Screenplay)"
     },
     {
-      "title": "Music Department",
-      "names": "Reena Vashist | Ajay Mishra | Vaidehi Goyal"
+      "title": "Music & Sound Design",
+      "names": "Rajaryan Choudhary"
     },
     {
       "title": "Editing Department",
-      "names": "Ujjwal Sharma | Suraj Kumar | Jatin Khowar | Renu Chauhan"
+      "names": "Jatin Khowar | Renu Chauhan | Krishan Mohan"
     },
     {
       "title": "Production Companies",
@@ -86,16 +91,19 @@
     "genres": ["Spiritual", "Drama"],
     "year": "2026",
     "duration": "0h 51m",
-    "rating": "U",
+    "rating": "R",
     "language": "Hindi"
   },
 
   "synopsis": [
-    "Mahadev Tak Ka Safar is the journey of a soul moving through the twists and turns of life, unaware of its true purpose, yet constantly being drawn toward it. Through Raghav’s struggles, doubts, and breaking points, the story unfolds how life’s hardships are not just obstacles, but a part of the greater cycle of karma shaping his path.",
-            "As he faces pain, loss, and unanswered questions, he begins to realize that every experience is guiding him toward a deeper truth. In his darkest moments, the silent presence of Mahadev becomes his strength sometimes as a test, sometimes as a sign, and sometimes as a guiding force he cannot ignore.",
-            "It is a powerful tale of self-discovery, karma, and faith where, in the end, Raghav understands that his journey was never random, but a path leading him to his true identity and his eternal connection with Mahadev."
-          ],
-
+        "“Kalyug: Ant Ka Aarambh” is a grand, spiritual, and fantasy drama film that begins after the events of the Mahabharata and explores the rise of Kalyug, the spread of Adharma, and the final hope of Dharma.",
+        "In the prosperous and well governed kingdom of King Parikshit, an unseen darkness begins to emerge one that gradually takes hold of the entire human society. This darkness is not merely external, but represents the inner evils within humans such as greed, lust, anger, and moral decay.",
+        "The story portrays how a mysterious force known as “Kali” enters the human mind, trapping individuals in the web of their own actions, and slowly establishes the dominance of Kalyug across the Earth.",
+        "As the narrative unfolds, even a peaceful and devout village falls under the shadow of this darkness, where faith, devotion, and human values are tested against violence, betrayal, and sin. Every character is engaged in an internal battle between Dharma and Adharma.",
+        "The film also highlights how human weaknesses become their greatest enemies, and how an unseen force manipulates them to push society toward destruction.",
+        "Yet, amidst this growing darkness, a ray of hope emerges the promise of a divine force that will one day descend to restore Dharma once again.",
+        "“Kalyug: Ant Ka Aarambh” is not just a story, but a powerful cinematic representation of the truth of Kalyug, human psychology, and the prophecy of Lord Vishnu’s Kalki Avatar."
+         ],
   "songs": [
     {
       "image": "nazar_jo_thahri_shyam_par.webp",
@@ -116,9 +124,9 @@
       "duration": "2:15"
     },
     {
-      "image": "kali_anthem.webp",
-      "image_low": "kali_anthem-low.webp",
-      "title": "Kali Anthem – Yeh Ant Ka Aarambh Hai",  
+      "image": "kalyug_title_track.webp",
+      "image_low": "kalyug_title_track-low.webp",
+      "title": "Kalyug Title Track",  
       "duration": "1:46"
     },
     {
