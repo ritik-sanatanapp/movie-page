@@ -444,7 +444,7 @@
   flex-direction:column;
 }
 .poster img{
-  width: clamp(100px, 20vw, 3000px);     
+  width: clamp(100px, 20vw, 300px);     
   border-radius: clamp(6px, 1vw, 800px); 
   box-shadow: 0 6px 18px var(--shadow);
   border:1px solid var(--border);
@@ -495,37 +495,37 @@
     display: flex;
     align-items:center;
     text-align:center;
-    gap:10px;
-    padding:16px;
+    gap: clamp(3px, 1.2vw, 36px);
+    padding: clamp(4px, 2vw, 36px);
   }
-  .poster img{
-    width:120px;
-  }
-  .movie-text h1{
-    font-size:24px;
-    line-height:1.2;
-  }
+  .poster img {
+  width: clamp(120px, 30vw, 230px);
+}
+  .movie-text h1 {
+  font-size: clamp(18px, 4vw, 36px);
+  line-height: 1.2;
+}
   .genre-tags{
     justify-content:center;
     flex-wrap:wrap;
-    gap:6px;
-    margin-top:10px;
+    gap: clamp(4px, 1vw, 10px);
+    margin-top: clamp(6px, 1.5vw, 14px);
   }
-  .genre{
-    font-size:11px;
-    padding:5px 10px;
-  }
+  .genre {
+  font-size: clamp(10px, 2vw, 30px);
+  padding: clamp(4px, 0.8vw, 6px) clamp(8px, 1.5vw, 12px);
+}
   .movie-meta{
     display: flex;
     justify-content:center;
     flex-wrap:wrap;
-    gap:6px;
-    font-size:12px;
+    gap: clamp(4px, 1vw, 10px);
+    font-size: clamp(10px, 2vw, 30px);
   }
-  .dot{
-    width:3px;
-    height:3px;
-  }
+  .dot {
+  width: clamp(3px, 0.8vw, 10px);
+  height: clamp(3px, 0.8vw, 10px);
+}
 }
 
 /* ---------------- SYNOPSIS SECTION ---------------- */
@@ -555,6 +555,8 @@
   }
 }
 
+
+
 .info-row{
   display:flex;
   gap:15px; 
@@ -567,6 +569,7 @@
     gap:10px;
   }
 }
+
 /* ---------------- SONG SECTION ---------------- */
 .songs{
   flex:1;   
@@ -1260,7 +1263,7 @@ footer {
     color: var(--muted);
     text-decoration: none;
     font-weight: 500;
-    font-size: clamp(16px, 4vw, 160px);
+    font-size: clamp(16px, 4vw, 20px);
     position: relative;
     padding: 2px 0;
     transition: color 0.3s ease;
@@ -1272,11 +1275,11 @@ footer {
       gap: clamp(5px,1.5vh,20px);
     }
     #follow-us-container small {
-    font-size: clamp(16px, 4.5vw, 1006px);
+    font-size: clamp(16px, 4.5vw, 20px);
     }
     #social-media-links a img {
-      width: clamp(20px, 6vw, 2800px); 
-      height: clamp(20px, 6vw, 2800px);
+      width: clamp(20px, 6vw, 280px); 
+      height: clamp(20px, 6vw, 280px);
 }}
 
 
@@ -1304,9 +1307,9 @@ footer {
 @media(max-width:768px){
 #copyright-text {
   display: block;
-  margin-top: clamp(10px, 2vw, 2000px); 
-  margin-bottom: clamp(20px, 4vw, 4000px);
-  font-size: clamp(12px, 1.2vw, 1300px); 
+  margin-top: clamp(10px, 2vw, 200px); 
+  margin-bottom: clamp(20px, 4vw, 400px);
+  font-size: clamp(12px, 1.2vw, 20px); 
   color: var(--muted);
   text-align: center; 
 }
@@ -1320,6 +1323,7 @@ footer {
 }
 .below-footer #copyright-text {
   color: black;
-  font-size: clamp(12px, 4vw, 1600px);
+  font-size: clamp(12px, 4vw, 20px);
 }
   }
+  
