@@ -10,19 +10,43 @@
     "trailer": "https://www.youtube.com/shorts/gfJjmL6dnw8"
   },
 
-
   "shorts": [
     { "link": "https://www.youtube.com/shorts/Qx07YhkTIcQ" },
     { "link": "https://www.youtube.com/shorts/ADhNtktp7Os" },
     { "link": "https://www.youtube.com/shorts/1ZTms65fwrc" }
   ],
 
+    "ui_titles": {
+    "trailers": "TRAILERS & CLIPS",
+    "summary": "SUMMARY",
+    "details": "MORE DETAILS",
+    "songs": "MOVIE SONGS",
+    "screenshots": "SCREENSHOTS",
+    "stream_now": "STREAM NOW",
+    "credits": "CREDITS",
+    "reviews": "AUDIENCE REVIEWS"
+  },
+
+  "ui": {
+    "home": "Home",
+    "watch_now": "Watch Now",
+    "watch_vip": "Watch with Sanatan VIP+ Membership",
+    "this_show": "THIS SHOW IS...",
+    "audio": "AUDIO",
+    "subtitles": "SUBTITLES",
+    "genres": "GENRES",
+    "track": "Track",
+    "playtime": "Playtime",
+    "available_now": "Available Now",
+    "follow_us": "Follow us on"
+  },
+
+
   "info": {
     "type": "Rousing, Spiritual, Epic, Mythic, Emotional Journey, Faith & Redemption, Visually Rich, Indian, Inspirational, Drama, Movie",
     "audio": "Hindi [Original]",
     "subtitles": "Hindi"
   },
-
   "genres": [
     "Hindi-Language Movies",
     "Bollywood Movies",
@@ -33,7 +57,6 @@
     "Epic Journey",
     "Drama Movies"
   ],
-
   "screenshots": [
     "ss1.webp", "ss1-low.webp",
     "ss2.webp", "ss2-low.webp",
