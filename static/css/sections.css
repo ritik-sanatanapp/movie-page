@@ -546,14 +546,15 @@
   line-height: clamp(1.5vw, 1.7vw, 10vw);
   text-align: justify;
   color: #fdfcf9;
-  font-size: clamp(14px, 1.3vw, 20000px);
+  font-size: clamp(14px, 1.3vw, 200px);
 }
 @media(max-width:768px){
   .synopsis-text {
-    font-size: clamp(12px,3.2vw, 1800px);
+    font-size: clamp(12px,3.2vw, 18px);
     line-height:1.6;
   }
 }
+
 .info-row{
   display:flex;
   gap:15px; 

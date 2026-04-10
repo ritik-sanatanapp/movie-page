@@ -1,19 +1,15 @@
 .bg-blur{
   position: fixed;
   inset: 0;
-
   background-image: var(--bg-desktop);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
   filter: blur(50px) brightness(0.6);
   transform: scale(1.5);
-
   z-index: -1;
   pointer-events: none;
 }
-
 @media (max-width: 768px) {
   .bg-blur{
     background-image: var(--bg-mobile);
@@ -25,7 +21,6 @@
 .div-mid{
   padding: 0 clamp(1rem, 5vw, 6.5rem);
 }
-
 @media (max-width: 768px){
   .div-mid{
     padding: clamp(0.75rem, 1.5vw, 1.25rem);
