@@ -11,7 +11,6 @@
 </head>
 <body>
 
-
 <div 
   class="bg-blur"
   style="
@@ -52,7 +51,7 @@
       <!-- HOME -->
       <div class="header-home">
         <a href="{{ common.site.home_link }}" class="home">
-          {{ "Home" if lang == "en" else "होम" }}
+          {{ movie.ui.home }}
         </a>
       </div>
     </nav>
@@ -88,8 +87,8 @@
         loading="lazy">
     </picture>
     <div class="trailer-watchnow">
-      <div class="trailer-watchnow-title">
-        {{ "Watch Now" if lang == "en" else "अभी देखें" }}
+      <div class="trailer-watchnow-title">  
+          {{ movie.ui.watch_now }}
       </div>
       <div class="trailer-watchnow-images">
         <!-- ANDROID -->
@@ -120,12 +119,12 @@
         </div>
       </div>
       <div class="trailer-watchnow-below">
-        {{ "Watch with Sanatan VIP+ Membership" if lang == "en" else "Sanatan VIP+ सदस्यता के साथ देखें" }}
+          {{ movie.ui.watch_vip }}
       </div>
     </div>
     <div class="trailer-watchnow-button">
       <button id="trailer-watchnow-button">
-        {{ "Watch Now" if lang == "en" else "अभी देखें" }}
+          {{ movie.ui.watch_now }}
       </button>
     </div>
   </div>
@@ -133,7 +132,7 @@
 
 <div class="div-mid">
 <div class="section-title">
-  {{ "Trailers & Clips" if lang == "en" else "ट्रेलर्स और क्लिप्स" }}
+    {{ movie.ui_titles.trailers }}
 </div>
 <div class="shorts-wrapper">
   <div class="shorts-list">
@@ -191,7 +190,7 @@
 
 <div class="synopsis-section">
   <div class="section-title">
-    {{ "Summary" if lang == "en" else "कहानी" }}
+    {{ movie.ui_titles.summary }}
   </div>
   <div class="synopsis">
     {% for paragraph in movie.synopsis %}
@@ -201,12 +200,12 @@
 </div>
 
 
-
-<div class="section-title">More Details</div>
+<div class="section-title">
+    {{ movie.ui_titles.details }}</div>
 <div class="info-row">
   <div class="info-block">
     <div class="info-label">
-      {{ "This show is..." if lang == "en" else "यह शो है..." }}
+    {{ movie.ui.this_show }}
     </div>
     <div class="info-value">
       {{ movie.info.type }}
@@ -215,7 +214,7 @@
   <div class="info-block">
     <div class="info-sub-block">
       <div class="info-label">
-        {{ "AUDIO" if lang == "en" else "ऑडियो" }}
+    {{ movie.ui.audio }}
       </div>
       <div class="info-value">
         {{ movie.info.audio }}
@@ -223,7 +222,7 @@
     </div>
     <div class="info-sub-block">
       <div class="info-label">
-        {{ "SUBTITLES" if lang == "en" else "सबटाइटल्स" }}
+        {{ movie.ui.subtitles }}
       </div>
       <div class="info-value">
         {{ movie.info.subtitles }}
@@ -232,9 +231,8 @@
   </div>
   <div class="info-block">
     <div class="info-label">
-      {{ "Genres" if lang == "en" else "श्रेणियाँ" }}
+        {{ movie.ui.genres }}
     </div>
-
     <div class="info-value">
       {% for genre in movie.movie.genres %}
         {{ genre }}{% if not loop.last %}, {% endif %}
@@ -246,7 +244,7 @@
 
 
 <div class="section-title">
-  {{ "MOVIE SONGS" if lang == "en" else "फिल्म के गाने" }}
+        {{ movie.ui_titles.songs }}
 </div>  
 <div class="songs">  
   {% for song in movie.songs %}
@@ -263,11 +261,11 @@
     </div>
     <div class="song-content">
       <p>
-        <strong>{{ "Track" if lang == "en" else "गीत" }} :</strong> 
+        <strong>{{ movie.ui.track }} :</strong> 
         {{ song.title }}
       </p>
       <p>
-        <strong>{{ "Playtime" if lang == "en" else "समय" }} :</strong> 
+        <strong>{{ movie.ui.playtime }} :</strong> 
         {{ song.duration }}
       </p>
     </div>
@@ -277,7 +275,7 @@
 
 
 <div class="section-title">
-  {{ "SCREENSHOTS" if lang == "en" else "स्क्रीनशॉट्स" }}
+  {{ movie.ui_titles.screenshots }}
 </div>
 <div class="screenshots">
   <div class="screenshots-wrapper">
@@ -302,7 +300,8 @@
 
 
 
-<div class="section-title">{{ "Stream Now" if lang == "en" else "अभी देखें" }}</div>
+<div class="section-title">
+  {{ movie.ui_titles.stream_now }}</div>
 <section class="stream-section">
   <p class="info-value">
     {{ common.stream.text[lang] }}</p>
@@ -341,7 +340,7 @@
 
 
 <div class="section-title">
-  {{ "Credits" if lang == "en" else "श्रेय" }}
+  {{ movie.ui_titles.credits }}
 </div>
 
 <div class="credits">
@@ -370,7 +369,7 @@
 
 <div class="review">
           <div class="section-title">
-            {{ "Audience Reviews" if lang == "en" else "दर्शकों की राय" }}
+  {{ movie.ui_titles.reviews }}
           </div>
           <div class="review-wrapper">
             <button class="review-scroll-btn left">❮</button>
@@ -410,7 +409,7 @@
 
 <!-- DOWNLOAD SECTION -->
  <section class="download-section">
-  <p>{{ "Available Now" if lang == "en" else "अब उपलब्ध" }}</p>
+  <p>{{ movie.ui.available_now }}</p>
   <div id="download-button-android">
     <a href="{{ common.stream.google_play.link }}" target="_blank">
             <picture>
@@ -464,7 +463,7 @@
 
 
   <div id="follow-us-container" class="footer-social">
-    <small>{{ "Follow us on" if lang == "en" else "हमें फॉलो करें" }}</small>
+    <small>{{ movie.ui.follow_us}}</small>
     <div id="social-media-links">
       {% for key, social in common.social.items() %}
           <a href="{{ social.url }}" target="_blank">
@@ -520,7 +519,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const button = document.getElementById("trailer-watchnow-button");
 
   if (!button) return; // ✅ prevent crash
-
   button.addEventListener("click", () => {
     const ua = navigator.userAgent.toLowerCase();
 

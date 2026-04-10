@@ -31,7 +31,7 @@ def home():
     lang = get_lang()
     common = load_common()
     movie = load_movie("kalyug", lang)  # default movie
-    return render_template("index.html", common=common, movie=movie, lang=lang)
+    return render_template("movie.html", common=common, movie=movie, lang=lang)
 
 # ------------------ MOVIE PAGE -------------------
 @app.route("/movie/<movie_id>")
@@ -40,7 +40,7 @@ def movie_page(movie_id):
     common = load_common()
     movie = load_movie(movie_id, lang)
     return render_template(
-    "index.html",
+    "movie.html",
     common=common,  
     movie=movie,
     lang=lang
