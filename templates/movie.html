@@ -11,6 +11,8 @@
 </head>
 <body>
 
+
+<!-- BG-BLUR SECTION -->
 <div 
   class="bg-blur"
   style="
@@ -19,6 +21,9 @@
   ">
 </div>
 
+
+
+<!-- HEADER SECTION -->
 <header class="header">
   <div class="header-inner">
     <!-- LOGO -->
@@ -32,8 +37,7 @@
           alt="logo">
       </picture>
     </div>
-
-    <!-- NAV -->
+    <!-- LINKS -->
     <nav class="header-links">
       <div class="header-language">
         <a href="{{ request.path }}?lang={{ 'hi' if lang == 'en' else 'en' }}">
@@ -60,7 +64,7 @@
 
 
 
-
+<!-- TRAILER SECTION -->
 <div class="trailer-container">
   <div class="trailer-image">
     <picture>
@@ -68,6 +72,7 @@
       <source 
         media="(max-width: 768px)" 
         srcset="{{ url_for('static', filename='movies/' + movie.id + '/images/low-res/' + movie.hero.cover) }}">
+        <!-- srcset="{{ movie.hero.cover_low }}"> -->
       <!-- Desktop -->
       <img 
         src="{{ url_for('static', filename='movies/' + movie.id + '/images/high-res/' + movie.hero.cover) }}" 
@@ -130,7 +135,12 @@
   </div>
 </div>
 
+
 <div class="div-mid">
+
+
+
+<!-- SHORTS SECTION -->
 <div class="section-title">
     {{ movie.ui_titles.trailers }}
 </div>
@@ -152,6 +162,8 @@
 </div>
 
 
+
+<!-- POSTER SECTION -->
 <div class="title-section">
   <div class="poster">
     <picture>
@@ -185,9 +197,7 @@
 
 
 
-
-
-
+<!-- SYNOPSIS SECTION -->
 <div class="synopsis-section">
   <div class="section-title">
     {{ movie.ui_titles.summary }}
@@ -200,8 +210,10 @@
 </div>
 
 
+
+<!-- DETAILS SECTION -->
 <div class="section-title">
-    {{ movie.ui_titles.details }}</div>
+    {{ movie.ui_titles.details }}</div> 
 <div class="info-row">
   <div class="info-block">
     <div class="info-label">
@@ -243,6 +255,7 @@
 
 
 
+<!-- SONG SECTION -->
 <div class="section-title">
         {{ movie.ui_titles.songs }}
 </div>  
@@ -274,6 +287,8 @@
 </div> 
 
 
+
+<!-- SCREENSHOT SECTION -->
 <div class="section-title">
   {{ movie.ui_titles.screenshots }}
 </div>
@@ -300,6 +315,7 @@
 
 
 
+<!-- STREAM SECTION -->
 <div class="section-title">
   {{ movie.ui_titles.stream_now }}</div>
 <section class="stream-section">
@@ -337,12 +353,10 @@
 
 
 
-
-
+<!-- CREDITS SECTION -->
 <div class="section-title">
   {{ movie.ui_titles.credits }}
 </div>
-
 <div class="credits">
         {% for credit in movie.credits %}
         
@@ -363,10 +377,10 @@
           {% endif %}
         {% endfor %}
         </div>
-
 </div>
 
 
+<!-- REVIEW SECTION -->
 <div class="review">
           <div class="section-title">
   {{ movie.ui_titles.reviews }}
@@ -382,7 +396,6 @@
                       <source 
                         media="(max-width: 768px)" 
                         srcset="{{ url_for('static', filename='common/images/' + common.defaults.user_logo_low) }}">
-                       
                       <img 
                         src="{{ url_for('static', filename='common/images/' + common.defaults.user_logo) }}" 
                         alt="user">
@@ -403,9 +416,10 @@
               {% endfor %}
             </div>
             <button class="review-scroll-btn right">❯</button>
-        
           </div>
         </div>
+
+
 
 <!-- DOWNLOAD SECTION -->
  <section class="download-section">
@@ -440,6 +454,7 @@
 
 
 
+<!-- FOOTER SECTION -->
 <footer class="footer">
   <div id="page-links" class="footer-nav">
     {% for link in common.footer.links %}
@@ -460,8 +475,6 @@
       </picture>
     </a>
   </div>
-
-
   <div id="follow-us-container" class="footer-social">
     <small>{{ movie.ui.follow_us}}</small>
     <div id="social-media-links">
@@ -481,19 +494,22 @@
       {% endfor %}
     </div>
   </div>
-
-  
 </footer>
 
+
+
+<!-- BELOW FOOTER SECTION -->
 <div class="below-footer">
   <small id="copyright-text" style="background: white;">© 2025 Sanatanapp Private Limited All Rights Reserved.</small>
   </div>
 
-<script src="https://www.youtube.com/iframe_api"></script>
 
+
+
+<!-- JS -->
+<script src="https://www.youtube.com/iframe_api"></script>
 <script>
 let players = [];
-
 function onYouTubeIframeAPIReady() {
   document.querySelectorAll(".yt-player").forEach((el, i) => {
     players[i] = new YT.Player(el, {
@@ -503,7 +519,6 @@ function onYouTubeIframeAPIReady() {
     });
   });
 }
-
 function onPlayerStateChange(event) {
   if (event.data === YT.PlayerState.PLAYING) {
     players.forEach(player => {
@@ -517,17 +532,13 @@ function onPlayerStateChange(event) {
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const button = document.getElementById("trailer-watchnow-button");
-
   if (!button) return; // ✅ prevent crash
   button.addEventListener("click", () => {
     const ua = navigator.userAgent.toLowerCase();
-
     const isAndroid = ua.includes("android");
     const isIOS = /iphone|ipad|ipod/.test(ua);
-
     const playStore = "{{ common.stream.google_play.link }}";
     const appStore = "{{ common.stream.app_store.link }}";
-
     if (isAndroid && playStore) {
       window.open(playStore, "_blank");
     } 
