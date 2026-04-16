@@ -6,12 +6,11 @@
     "cover": "cover.webp",
     "cover_low": "cover-low.webp",
     "title_image": "title.webp",
-    "title_image_low": "title-low.webp",
-    "trailer": "https://www.youtube.com/shorts/gfJjmL6dnw8"
+    "title_image_low": "title-low.webp"
   },
 
-
   "shorts": [
+    { "link": "https://www.youtube.com/shorts/SLOfrJOS2aE" },
     { "link": "https://www.youtube.com/shorts/Qx07YhkTIcQ" },
     { "link": "https://www.youtube.com/shorts/ADhNtktp7Os" },
     { "link": "https://www.youtube.com/shorts/1ZTms65fwrc" }

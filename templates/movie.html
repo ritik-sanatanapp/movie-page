@@ -16,8 +16,8 @@
 <div 
   class="bg-blur"
   style="
-    --bg-desktop: url('{{ url_for('static', filename='movies/' + movie.id + '/images/high-res/' + movie.hero.cover) }}');
-    --bg-mobile: url('{{ url_for('static', filename='movies/' + movie.id + '/images/low-res/' + movie.hero.cover) }}');
+    --bg-desktop: url('{{ movie.hero.cover }}');
+    --bg-mobile: url('{{ movie.hero.cover_low }}');
   ">
 </div>
 
@@ -71,22 +71,19 @@
       <!-- Mobile -->
       <source 
         media="(max-width: 768px)" 
-        srcset="{{ url_for('static', filename='movies/' + movie.id + '/images/low-res/' + movie.hero.cover) }}">
-        <!-- srcset="{{ movie.hero.cover_low }}"> -->
+        srcset="{{ movie.hero.cover_low }}">
       <!-- Desktop -->
       <img 
-        src="{{ url_for('static', filename='movies/' + movie.id + '/images/high-res/' + movie.hero.cover) }}" 
+        src="{{ movie.hero.cover }}"
         alt="{{ movie.title[lang] }} Hero Cover"
         loading="lazy">
     </picture>
     <picture>
-      <!-- Mobile -->
       <source 
         media="(max-width: 768px)" 
-        srcset="{{ url_for('static', filename='movies/' + movie.id + '/images/low-res/' + movie.hero.title_image) }}">
-      <!-- Desktop -->
+        srcset="{{ movie.hero.title_image_low }}">
       <img 
-        src="{{ url_for('static', filename='movies/' + movie.id + '/images/high-res/' + movie.hero.title_image) }}"
+        src="{{ movie.hero.title_image }}"
         class="trailer-overlay"
         alt="{{ movie.title[lang] }} Title Image"
         loading="lazy">
@@ -169,9 +166,9 @@
     <picture>
       <source 
         media="(max-width: 768px)" 
-        srcset="{{ url_for('static', filename='movies/' + movie.id + '/images/low-res/' + movie.movie.poster) }}">
+        srcset="{{ movie.movie.poster_low }}">
       <img 
-        src="{{ url_for('static', filename='movies/' + movie.id + '/images/high-res/' + movie.movie.poster) }}" 
+        src="{{ movie.movie.poster }}" 
         alt="Poster">
     </picture>
   </div>
@@ -258,7 +255,7 @@
 <!-- SONG SECTION -->
 <div class="section-title">
         {{ movie.ui_titles.songs }}
-</div>  
+</div> 
 <div class="songs">  
   {% for song in movie.songs %}
   <div class="song-item">
@@ -266,11 +263,12 @@
       <picture>
         <source 
           media="(max-width: 768px)" 
-          srcset="{{ url_for('static', filename='movies/' + movie.id + '/images/low-res/' + song.image) }}">
+          srcset="{{ movie.songs.image_low }}">
         <img 
-          src="{{ url_for('static', filename='movies/' + movie.id + '/images/high-res/' + song.image) }}" 
+          src="{{ movie.songs.image }}" 
           alt="{{ song.title }}">
       </picture>
+
     </div>
     <div class="song-content">
       <p>

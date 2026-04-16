@@ -275,7 +275,7 @@
 }
 .trailer-watchnow-images{
   display: flex;              
-  flex-direction: row;       
+  flex-direction: row;
   justify-content: center;    
   align-items: center;
   gap: clamp(2px, 0.5vw, 200px);  
