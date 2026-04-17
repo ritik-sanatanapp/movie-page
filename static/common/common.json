@@ -1,15 +1,13 @@
 {
   "site": {
-    "logo": "logo_text.webp",
-    "logo_low": "logo_text-low.webp",
+    "logo": "https://storage.googleapis.com/kalyug_movie_site_bucket/common/logo.webp",
 
     "language_button": {
       "text": {
         "en": "Switch to Hindi",
         "hi": "अंग्रेज़ी में बदलें"
       },
-      "icon": "eng_to_hindi.webp",
-      "icon_low": "eng_to_hindi-low.webp",
+      "icon": "https://storage.googleapis.com/kalyug_movie_site_bucket/common/eng_to_hindi.webp",
       "link": "/?lang=hi"
     },
 
@@ -22,22 +20,17 @@
             "hi": "पूरी फिल्म देखें—Sanatan App डाउनलोड करें और इस अद्भुत यात्रा का आनंद लें!"
           },
         "google_play": {
-          "image": "googleplay.webp",
-          "image_low": "googleplay-low.webp",
-
+          "image": "https://storage.googleapis.com/kalyug_movie_site_bucket/common/googleplay.webp",
           "link": "https://play.google.com/store/apps/details?id=com.sanatan.lite"
         },
         "app_store": {
-          "image": "App_Store.webp",
-          "image_low": "App_Store-low.webp",
-
+          "image": "https://storage.googleapis.com/kalyug_movie_site_bucket/common/App_Store.webp",
           "link": "https://apps.apple.com/in/app/sanatan-bhajan-mantra-status/id6744445436"
         }
       },
 
   "footer": {
-    "logo": "logo_text.webp",
-    "logo_low": "logo_text-low.webp",
+    "logo": "https://storage.googleapis.com/kalyug_movie_site_bucket/common/logo.webp",
 
     "links": [
       {
@@ -66,28 +59,23 @@
 
   "social": {
     "linkedin": {
-      "icon": "LinkedIn_logo.webp",
-      "icon_low": "LinkedIn_logo-low.webp",
+      "icon": "https://storage.googleapis.com/kalyug_movie_site_bucket/common/LinkedIn_logo.webp",
       "url": "https://www.linkedin.com/company/sanatanapp"
     },
     "facebook": {
-      "icon": "Facebook_logo.webp",
-      "icon_low": "Facebook_logo-low.webp",
+      "icon": "https://storage.googleapis.com/kalyug_movie_site_bucket/common/Facebook_logo.webp",
       "url": "https://www.facebook.com/p/Sanatan-App-61553444175348/"
     },
     "twitter": {
-      "icon": "X_(formerly_Twitter).webp",
-      "icon_low": "X_(formerly_Twitter)-low.webp",
+      "icon": "https://storage.googleapis.com/kalyug_movie_site_bucket/common/X_(formerly_Twitter).webp",
       "url": "https://twitter.com/Sanatanapp"
     },
     "instagram": {
-      "icon": "Instagram_logo.webp",
-      "icon_low": "Instagram_logo-low.webp",
+      "icon": "https://storage.googleapis.com/kalyug_movie_site_bucket/common/Instagram_logo.webp",
       "url": "https://www.instagram.com/sanatanapp/"
     },
     "youtube": {
-      "icon": "YouTube_logo.webp",
-      "icon_low": "YouTube_logo-low.webp",
+      "icon": "https://storage.googleapis.com/kalyug_movie_site_bucket/common/YouTube_logo.webp",
       "url": "https://www.youtube.com/@Sanatanapp"
     }
   },
@@ -95,7 +83,6 @@
 
 
   "defaults": {
-  "user_logo": "user_logo.webp",
-  "user_logo_low": "user_logo-low.webp"
+  "user_logo": "https://storage.googleapis.com/kalyug_movie_site_bucket/common/user_logo.webp"
 }
 }

@@ -31,9 +31,9 @@
       <picture>
         <source 
           media="(max-width: 768px)" 
-          srcset="{{ url_for('static', filename='common/images/' + common.site.logo) }}">
+          srcset="{{ common.site.logo }}">
         <img 
-          src="{{ url_for('static', filename='common/images/' + common.site.logo) }}" 
+          src="{{ common.site.logo }}" 
           alt="logo">
       </picture>
     </div>
@@ -45,9 +45,9 @@
           <picture>
             <source 
               media="(max-width: 768px)" 
-              srcset="{{ url_for('static', filename='common/images/' + common.site.language_button.icon) }}">
+              srcset="{{ common.site.language_button.icon }}">
             <img 
-              src="{{ url_for('static', filename='common/images/' + common.site.language_button.icon) }}" 
+              src="{{ common.site.language_button.icon }}" 
               alt="language icon">
           </picture>
         </a>
@@ -99,9 +99,9 @@
             <picture>
               <source 
                 media="(max-width: 768px)" 
-                srcset="{{ url_for('static', filename='common/images/' + common.stream.google_play.image) }}">
+                srcset="{{ common.stream.google_play.image }}">
               <img 
-                src="{{ url_for('static', filename='common/images/' + common.stream.google_play.image) }}" 
+                src="{{ common.stream.google_play.image }}" 
                 alt="Google Play">
             </picture>
           </a>
@@ -112,9 +112,9 @@
             <picture>
               <source 
                 media="(max-width: 768px)" 
-                srcset="{{ url_for('static', filename='common/images/' + common.stream.app_store.image) }}">    
+                srcset="{{ common.stream.app_store.image }}">    
               <img 
-                src="{{ url_for('static', filename='common/images/' + common.stream.app_store.image) }}" 
+                src="{{ common.stream.app_store.image }}" 
                 alt="App Store">
             </picture>
           </a>
@@ -269,7 +269,6 @@
           src="{{ song.image }}" 
           alt="{{ song.title }}">
       </picture>
-
     </div>
     <div class="song-content">
       <p>
@@ -305,7 +304,7 @@
             alt="Screenshot {{ i + 1 }}">
         </picture>
       </div>
-      {% endfor %}
+      {% endfor %}  
     </div>
     <button class="ss-scroll-btn right">❯</button>
   </div>
@@ -325,10 +324,10 @@
             <picture>
               <source 
                 media="(max-width: 768px)" 
-                srcset="{{ url_for('static', filename='common/images/' + common.stream.google_play.image) }}">
+                srcset="{{ common.stream.google_play.image }}">
             
               <img 
-                src="{{ url_for('static', filename='common/images/' + common.stream.google_play.image) }}" 
+                src="{{ common.stream.google_play.image }}" 
                 alt="Google Play">
             </picture>
           </a>
@@ -338,10 +337,10 @@
             <picture>
               <source 
                 media="(max-width: 768px)" 
-                srcset="{{ url_for('static', filename='common/images/' + common.stream.app_store.image) }}">
+                srcset="{{ common.stream.app_store.image }}">
             
               <img 
-                src="{{ url_for('static', filename='common/images/' + common.stream.app_store.image) }}" 
+                src="{{ common.stream.app_store.image }}" 
                 alt="App Store">
             </picture>
           </a>
@@ -393,9 +392,9 @@
                     <picture>
                       <source 
                         media="(max-width: 768px)" 
-                        srcset="{{ url_for('static', filename='common/images/' + common.defaults.user_logo_low) }}">
+                        srcset="{{ common.defaults.user_logo }}">
                       <img 
-                        src="{{ url_for('static', filename='common/images/' + common.defaults.user_logo) }}" 
+                        src="{{ common.defaults.user_logo }}" 
                         alt="user">
                     </picture>
                   </div>
@@ -427,10 +426,10 @@
             <picture>
               <source 
                 media="(max-width: 768px)" 
-                srcset="{{ url_for('static', filename='common/images/' + common.stream.google_play.image) }}">
+                srcset="{{ common.stream.google_play.image }}">
             
               <img 
-                src="{{ url_for('static', filename='common/images/' + common.stream.google_play.image) }}" 
+                src="{{ common.stream.google_play.image }}" 
                 alt="Google Play">
             </picture>
           </a>
@@ -440,10 +439,10 @@
             <picture>
               <source 
                 media="(max-width: 768px)" 
-                srcset="{{ url_for('static', filename='common/images/' + common.stream.app_store.image) }}">
+                srcset="{{ common.stream.app_store.image }}">
             
               <img 
-                src="{{ url_for('static', filename='common/images/' + common.stream.app_store.image) }}" 
+                src="{{ common.stream.app_store.image }}" 
                 alt="App Store">
             </picture>
           </a>
@@ -466,9 +465,9 @@
     <a href="{{ common.site.home_link }}">
       <picture>
         <source media="(max-width: 768px)" 
-                srcset="{{ url_for('static', filename='common/images/' + common.site.logo) }}">
+                srcset="{{ common.site.logo }}">
         
-        <img src="{{ url_for('static', filename='common/images/' + common.site.logo) }}"
+        <img src="{{ common.site.logo }}"
              alt="{{ common.site.name }} Logo" id="bottom-logo">
       </picture>
     </a>
@@ -482,10 +481,10 @@
           <!-- Mobile -->
           <source 
             media="(max-width: 768px)" 
-            srcset="{{ url_for('static', filename='common/images/' + social.icon_low) }}">
+            srcset="{{ social.icon }}">
           <!-- Desktop -->
           <img 
-            src="{{ url_for('static', filename='common/images/' + social.icon) }}" 
+            src="{{ social.icon }}" 
             alt="{{ key }}">
         </picture>
           </a>
