@@ -252,6 +252,7 @@
 
 
 
+
 <!-- SONG SECTION -->
 <div class="section-title">
         {{ movie.ui_titles.songs }}
@@ -263,9 +264,9 @@
       <picture>
         <source 
           media="(max-width: 768px)" 
-          srcset="{{ movie.songs.image_low }}">
+          srcset="{{ song.image_low }}">
         <img 
-          src="{{ movie.songs.image }}" 
+          src="{{ song.image }}" 
           alt="{{ song.title }}">
       </picture>
 
@@ -286,7 +287,6 @@
 
 
 
-<!-- SCREENSHOT SECTION -->
 <div class="section-title">
   {{ movie.ui_titles.screenshots }}
 </div>
@@ -294,15 +294,15 @@
   <div class="screenshots-wrapper">
     <button class="ss-scroll-btn left">❮</button>
     <div class="screenshots-list">
-      {% for i in range(0, movie.screenshots|length, 2) %}
+      {% for i in range(movie.screenshots.high | length) %}
       <div class="screenshots-item">
         <picture>
           <source 
             media="(max-width: 768px)" 
-            srcset="{{ url_for('static', filename='movies/' + movie.id + '/images/low-res/' + movie.screenshots[i]) }}">
+            srcset="{{ movie.screenshots.low[i] }}">
           <img 
-            src="{{ url_for('static', filename='movies/' + movie.id + '/images/high-res/' + movie.screenshots[i]) }}" 
-            alt="Screenshot {{ (i//2) + 1 }}">
+            src="{{ movie.screenshots.high[i] }}" 
+            alt="Screenshot {{ i + 1 }}">
         </picture>
       </div>
       {% endfor %}
