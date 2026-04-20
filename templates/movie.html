@@ -82,7 +82,8 @@
       <!-- Desktop -->
       <img 
         src="{{ movie.hero.cover }}"
-        alt="{{ movie.title[lang] }} Hero Cover">
+        alt="{{ movie.title[lang] }} Hero Cover"
+        fetchpriority="high">
     </picture>
     <picture>
       <source 
@@ -91,8 +92,7 @@
       <img 
         src="{{ movie.hero.title_image }}"
         class="trailer-overlay"
-        alt="{{ movie.title[lang] }} Title Image"
-        loading="lazy">
+        alt="{{ movie.title[lang] }} Title Image">
     </picture>
     <div class="trailer-watchnow">
       <div class="trailer-watchnow-title">  
@@ -273,7 +273,7 @@
           srcset="{{ song.image_low }}">
         <img 
           src="{{ song.image }}" 
-          alt="{{ song.title }}">
+          alt="{{ song.title }}" loading="lazy">
       </picture>
     </div>
     <div class="song-content">
@@ -307,7 +307,7 @@
             srcset="{{ movie.screenshots.low[i] }}">
           <img 
             src="{{ movie.screenshots.high[i] }}" 
-            alt="Screenshot {{ i + 1 }}">
+            alt="Screenshot {{ i + 1 }}" loading="lazy">
         </picture>
       </div>
       {% endfor %}  
@@ -334,7 +334,7 @@
             
               <img 
                 src="{{ common.stream.google_play.image }}" 
-                alt="Google Play">
+                alt="Google Play"  loading="lazy">
             </picture>
           </a>
     </div>
@@ -344,10 +344,9 @@
               <source 
                 media="(max-width: 768px)" 
                 srcset="{{ common.stream.app_store.image }}">
-            
               <img 
                 src="{{ common.stream.app_store.image }}" 
-                alt="App Store">
+                alt="App Store" loading="lazy">
             </picture>
           </a>
     </div>
@@ -401,7 +400,7 @@
                         srcset="{{ common.defaults.user_logo }}">
                       <img 
                         src="{{ common.defaults.user_logo }}" 
-                        alt="user">
+                        alt="user" loading="lazy">
                     </picture>
                   </div>
                   <div class="review-head-right">
@@ -436,7 +435,7 @@
             
               <img 
                 src="{{ common.stream.google_play.image }}" 
-                alt="Google Play">
+                alt="Google Play"  loading="lazy">
             </picture>
           </a>
   </div>
@@ -449,7 +448,7 @@
             
               <img 
                 src="{{ common.stream.app_store.image }}" 
-                alt="App Store">
+                alt="App Store" loading="lazy">
             </picture>
           </a>
   </div>
@@ -474,7 +473,7 @@
                 srcset="{{ common.site.logo }}">
         
         <img src="{{ common.site.logo }}"
-             alt="{{ common.site.name }} Logo" id="bottom-logo">
+             alt="{{ common.site.name }} Logo" id="bottom-logo" loading="lazy">
       </picture>
     </a>
   </div>
@@ -491,7 +490,7 @@
           <!-- Desktop -->
           <img 
             src="{{ social.icon }}" 
-            alt="{{ key }}">
+            alt="{{ key }}" loading="lazy">
         </picture>
           </a>
       {% endfor %}
