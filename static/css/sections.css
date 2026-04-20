@@ -588,15 +588,14 @@
   align-items: center; 
   gap: clamp(8px, 1.5vw, 2000px);           
   padding: clamp(6px, 1.5vw, 1500px); 
-  padding-left: clamp(6px, 6vw, 1500px); 
-  padding-right: clamp(6px, 6vw, 1500px); 
+  padding-left: clamp(6px, 6vw, 150px); 
+  padding-right: clamp(6px, 6vw, 150px); 
   border-bottom: 1px solid #ccc;
   border-top: 1px solid #ccc;
 }
 .song-image {
   aspect-ratio: 1 / 1;
   width: clamp(80px, 10vw, 600px);
-  height: clamp(80px, 10vw, 600px); 
   overflow: hidden;
   border-radius: clamp(8px, 1vw, 600px);
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
@@ -619,7 +618,6 @@
 @media( max-width:786px) {
   .song-image {
   width: clamp(8px, 20vw, 1200px);      
-  height: clamp(8px, 20vw, 1200px);  
   flex-shrink: 0; 
 }  
 .song-image img {
