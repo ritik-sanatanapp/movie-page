@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ movie.title }}</title> 
     <link rel="preload" as="image" 
-      href=".../high_res/cover.webp"
+      href="{{ movie.hero.cover }}"
       media="(min-width: 769px)">
-    
     <link rel="preload" as="image" 
-      href=".../low_res/cover.webp"
-      media="(max-width: 768px)">  
+      href="{{ movie.hero.cover_low }}"
+      media="(max-width: 768px)">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
@@ -83,8 +82,7 @@
       <!-- Desktop -->
       <img 
         src="{{ movie.hero.cover }}"
-        alt="{{ movie.title[lang] }} Hero Cover"
-        loading="lazy">
+        alt="{{ movie.title[lang] }} Hero Cover">
     </picture>
     <picture>
       <source 
