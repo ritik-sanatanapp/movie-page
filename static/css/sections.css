@@ -741,9 +741,9 @@
     padding: clamp(6px, 1vw, 16000px) 0;
   }
   .screenshots-item{
-    width:auto;
-    height: clamp(16px, 70vw, 3200px);
-    border-radius: clamp(4px, 1.5vw, 1200px);
+    width: clamp(100px, 40vw, 180px);
+    height: auto;
+    aspect-ratio: 9 / 16;
   }
   .screenshots-item:hover{
     transform:none;
@@ -842,8 +842,9 @@
 }
 .review-item{
   width: clamp(200px, 25vw, 4000px);
-  height: clamp(144px, 17vw, 2880px);
-  aspect-ratio: 9 / 16; 
+  /* height: clamp(144px, 17vw, 2880px); */
+  height: auto;
+  aspect-ratio: 4 / 3;
   background:#ffffff;
   color:#0b0a0d;
   border:1px solid #d1cfc9;
@@ -928,8 +929,9 @@
   width: 100%;
 }
 .review-head-left img {
-  width: clamp(20px, 5vw, 400px);
-  height: clamp(20px, 5vw, 400px);
+  width: clamp(20px, 5vw, 50px);
+  height: auto;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
 }
 .review-head-right {
@@ -981,7 +983,8 @@
 .review-item {
   min-width: clamp(140px, 18vw, 220px);
   max-width: clamp(180px, 20vw, 240px); 
-  height: 100%;
+  height: auto;  
+  aspect-ratio: 4 / 3; 
   display: flex;
   flex-direction: column;
   padding: clamp(4px, 1vw, 120px); 
@@ -997,8 +1000,9 @@
   max-height: clamp(40px, 6vh, 70px);
 }
 .review-head-left img {
-  width: clamp(20px, 7vw, 400px);
-  height: clamp(20px, 7vw, 400px);
+  width: clamp(20px, 7vw, 50px);
+  height: auto;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
 }
 .review-title {
@@ -1143,13 +1147,14 @@ footer {
 }
 #social-media-links {
   display: flex;
-  gap: clamp(8px, 1vw, 1500px); 
+  gap: clamp(8px, 1vw, 50px); 
   justify-content: center;
   align-items: center;
 }
 #social-media-links a img {
-  width: clamp(20px, 2vw, 2800px); 
-  height: clamp(20px, 2vw, 2800px);
+  width: clamp(20px, 2vw, 50px); 
+  height: auto;
+  aspect-ratio: 1 / 1;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 #social-media-links a img:hover {
@@ -1203,8 +1208,9 @@ footer {
     font-size: clamp(16px, 4.5vw, 20px);
     }
     #social-media-links a img {
-      width: clamp(20px, 6vw, 280px); 
-      height: clamp(20px, 6vw, 280px);
+      width: clamp(20px, 6vw, 40px); 
+      height: auto;
+      aspect-ratio: 1 / 1;
 }}
 
 
