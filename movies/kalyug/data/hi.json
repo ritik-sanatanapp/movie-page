@@ -3,10 +3,10 @@
   "title": "कलयुग",
 
   "hero": {
-    "cover": "cover.webp",
-    "cover_low": "cover-low.webp",
-    "title_image": "title.webp",
-    "title_image_low": "title-low.webp"
+    "cover": "https://storage.googleapis.com/kalyug_movie_site_bucket/high_res/cover.webp",
+    "cover_low": "https://storage.googleapis.com/kalyug_movie_site_bucket/low_res/cover.webp",
+    "title_image": "https://storage.googleapis.com/kalyug_movie_site_bucket/high_res/title.webp",
+    "title_image_low": "https://storage.googleapis.com/kalyug_movie_site_bucket/low_res/title.webp"
   },
 
   "shorts": [
@@ -58,28 +58,52 @@
     "ड्रामा फिल्में"
   ],
 
-  "screenshots": [
-    "ss1.webp", "ss1-low.webp",
-    "ss2.webp", "ss2-low.webp",
-    "ss3.webp", "ss3-low.webp",
-    "ss4.webp", "ss4-low.webp",
-    "ss5.webp", "ss5-low.webp",
-    "ss6.webp", "ss6-low.webp",
-    "ss7.webp", "ss7-low.webp",
-    "ss8.webp", "ss8-low.webp",
-    "ss9.webp", "ss9-low.webp",
-    "ss10.webp", "ss10-low.webp",
-    "ss11.webp", "ss11-low.webp",
-    "ss12.webp", "ss12-low.webp",
-    "ss13.webp", "ss13-low.webp",
-    "ss14.webp", "ss14-low.webp",
-    "ss15.webp", "ss15-low.webp",
-    "ss16.webp", "ss16-low.webp",
-    "ss17.webp", "ss17-low.webp",
-    "ss18.webp", "ss18-low.webp",
-    "ss19.webp", "ss19-low.webp",
-    "ss20.webp", "ss20-low.webp"
+  "screenshots": {
+    "high" : [
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/high_res/ss1.webp", 
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/high_res/ss2.webp", 
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/high_res/ss3.webp", 
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/high_res/ss4.webp", 
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/high_res/ss5.webp", 
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/high_res/ss6.webp", 
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/high_res/ss7.webp", 
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/high_res/ss8.webp", 
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/high_res/ss9.webp", 
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/high_res/ss10.webp",
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/high_res/ss11.webp",
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/high_res/ss12.webp",
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/high_res/ss13.webp",
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/high_res/ss14.webp",
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/high_res/ss15.webp",
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/high_res/ss16.webp",
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/high_res/ss17.webp",
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/high_res/ss18.webp",
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/high_res/ss19.webp",
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/high_res/ss20.webp"
   ],
+  "low":[
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/low_res/ss1.webp",
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/low_res/ss2.webp",
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/low_res/ss3.webp",
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/low_res/ss4.webp",
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/low_res/ss5.webp",
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/low_res/ss6.webp",
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/low_res/ss7.webp",
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/low_res/ss8.webp",
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/low_res/ss9.webp",
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/low_res/ss10.webp",
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/low_res/ss11.webp",
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/low_res/ss12.webp",
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/low_res/ss13.webp",
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/low_res/ss14.webp",
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/low_res/ss15.webp",
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/low_res/ss16.webp",
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/low_res/ss17.webp",
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/low_res/ss18.webp",
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/low_res/ss19.webp",
+    "https://storage.googleapis.com/kalyug_movie_site_bucket/low_res/ss20.webp"
+  ]
+},
   "credits": [
     {
       "title": "निर्देशक",
@@ -108,8 +132,8 @@
   ],
 
   "movie": {
-    "poster": "poster.webp",
-    "poster_low": "poster-low.webp",
+    "poster": "https://storage.googleapis.com/kalyug_movie_site_bucket/high_res/poster.webp",
+    "poster_low": "https://storage.googleapis.com/kalyug_movie_site_bucket/low_res/poster.webp",
     "title": "कलयुग: अंत का आरंभ",
     "genres": ["आध्यात्मिक", "ड्रामा"],
     "year": "2026",
@@ -130,32 +154,32 @@
 
   "songs": [
     {
-      "image": "nazar_jo_thahri_shyam_par.webp",
-      "image_low": "nazar_jo_thahri_shyam_par-low.webp",
+      "image": "https://storage.googleapis.com/kalyug_movie_site_bucket/high_res/nazar_jo_thahri_shyam_par.webp",
+      "image_low": "https://storage.googleapis.com/kalyug_movie_site_bucket/low_res/nazar_jo_thahri_shyam_par.webp",
       "title": "नज़र जो ठहरी श्याम पर",
       "duration": "3:39"
     },
     {
-      "image": "jhoome_re.webp",
-      "image_low": "jhoome_re-low.webp",
+      "image": "https://storage.googleapis.com/kalyug_movie_site_bucket/high_res/jhoome_re.webp",
+      "image_low": "https://storage.googleapis.com/kalyug_movie_site_bucket/low_res/jhoome_re.webp",
       "title": "झूमे रे",
       "duration": "2:05"
     },
     {
-      "image": "maya_hai_badi_qatil.webp",
-      "image_low": "maya_hai_badi_qatil-low.webp",
+      "image": "https://storage.googleapis.com/kalyug_movie_site_bucket/high_res/maya_hai_badi_qatil.webp",
+      "image_low": "https://storage.googleapis.com/kalyug_movie_site_bucket/low_res/maya_hai_badi_qatil.webp",
       "title": " माया हैं बड़ी कातिल",
       "duration": "2:15"
     },
     {
-      "image": "kalyug_title_track.webp",
-      "image_low": "kalyug_title_track-low.webp",
+      "image": "https://storage.googleapis.com/kalyug_movie_site_bucket/high_res/kalyug_title_track.webp",
+      "image_low": "https://storage.googleapis.com/kalyug_movie_site_bucket/low_res/kalyug_title_track.webp",
       "title": "“कलयुग टाइटल ट्रैक",
       "duration": "1:46"
     },
     {
-      "image": "hey_narayan_aao.webp",
-      "image_low": "hey_narayan_aao-low.webp",
+      "image": "https://storage.googleapis.com/kalyug_movie_site_bucket/high_res/hey_narayan_aao.webp",
+      "image_low": "https://storage.googleapis.com/kalyug_movie_site_bucket/low_res/hey_narayan_aao.webp",
       "title": "हे नारायण आओ",
       "duration": "2:59"
     }
