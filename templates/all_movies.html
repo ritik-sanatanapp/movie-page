@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+    <title>All Movies</title> 
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sections.css') }}">  
+    
+</head>
+<body>
+<!-- HEADER SECTION -->
+<header class="header">
+  <div class="header-inner">
+    <!-- LOGO -->
+    <div class="header-logo">
+      <picture>
+        <source 
+          media="(max-width: 768px)" 
+          srcset="{{ common.site.logo }}">
+        <img 
+          src="{{ common.site.logo }}" 
+          alt="logo">
+      </picture> Sanatan App
+    </div>
+    <!-- LINKS -->
+    <nav class="header-links">
+      <div class="header-language">
+        <a href="{{ request.path }}?lang={{ 'hi' if lang == 'en' else 'en' }}">
+          {{ common.site.language_button.text[lang] }}
+          <picture>
+            <source 
+              media="(max-width: 768px)" 
+              srcset="{{ common.site.language_button.icon }}">
+            <img 
+              src="{{ common.site.language_button.icon }}" 
+              alt="language icon">
+          </picture>
+        </a>
+      </div>
+      <!-- HOME -->
+      <div class="header-home">
+        <a href="{{ common.site.home_link }}" class="home">
+            Home
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="allmovies-heading">Movies</div>
+
+<div class="allmovies-container">
+  {% for movie in movies %}
+    <div class="movie-card">
+      <a href="{{ url_for('movie_page', movie_id=movie.id.split('-')[0]) }}">
+        <!-- Poster -->
+        <img src="{{ movie.movie.poster }}" alt="{{ movie.movie.title }}">
+
+        <!-- Content -->
+        <div class="movie-info">
+          <h3>{{ movie.movie.title }}</h3>
+          <div class="movie-genres">
+            {% for genre in movie.movie.genres %}
+              <span>{{ genre }}</span>{% if not loop.last %}, {% endif %}
+            {% endfor %}
+          </div>
+          <div class="movie-meta">
+            <span>{{ movie.movie.year }}</span><div class="dot"></div>
+            <span>{{ movie.movie.duration }}</span><div class="dot"></div>
+            <span>{{ movie.movie.rating }}</span><div class="dot"></div>
+            <span>{{ movie.movie.language }}</span>
+          </div>
+          
+        </div>
+      </a>
+    </div>
+  {% endfor %}
+</div>
+
+
+
+<style>
+.allmovies-heading {
+  text-align: center;
+  font-size: clamp(18px, 5vw, 280px);
+  font-weight: 600;
+  margin: 20px 0;
+  color: #000000;
+}
+
+/* ---------------- CONTAINER (COLUMN) ---------------- */
+.allmovies-container {
+  display: flex;
+  flex-direction: column; /* 👈 vertical list */
+  gap: 50px;
+  padding-top: 50px;
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+@media(max-width: 786px){
+.allmovies-container {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 5vw, 50px);
+  padding-top: clamp(8px, 3vw, 50px);
+  padding-left: clamp(8px, 5vw, 250px);
+  padding-right: clamp(8px, 5vw, 250px);
+}
+}
+
+/* ---------------- CARD (ROW INSIDE) ---------------- */
+.movie-card a {
+  display: flex;              /* 👈 row inside */
+  flex-direction: row;
+  gap: 15px;
+  text-decoration: none;
+  color: inherit;
+  background: #efebeb;
+  border-radius: 10px;
+  padding: 30px;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.movie-card a:hover {
+  transform: scale(1.02);
+}
+
+/* ---------------- IMAGE ---------------- */
+.movie-card img {
+  width: 250px;
+  height: auto;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+@media(max-width: 786px){
+
+.movie-card a {
+  display: flex;              /* 👈 row inside */
+  flex-direction: row;
+  gap: 15px;
+  text-decoration: none;
+  color: inherit;
+  background: #efebeb;
+  border-radius: 10px;
+  padding: 20px;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+.movie-card img {
+  width: clamp(10px, 30vw,200px);
+  height: auto;
+  border-radius: 8px;   
+  flex-shrink: 0;
+}
+}
+
+
+
+
+/* ---------------- TEXT SIDE ---------------- */
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+/* Title */
+.movie-info h3 {
+  margin: 0;
+  font-size: 45px;
+  color: #000000;
+}
+/* Meta */
+.movie-meta {
+  margin-top: 20px;
+  font-size: 30px;
+  color: #0000008A;
+  display: flex;
+  gap: 8px;
+  flex-wrap:wrap;
+  font-size: clamp(10px, 1vw, 900px);
+  justify-content: flex-start;
+}
+.movie-genres{
+margin-top: 20px;
+font-size:  clamp(10px, 1.2vw, 600px); 
+}
+.movie-genres span {
+  font-size: clamp(10px, 1.2vw, 600px);   
+  color:#131110;
+}
+.dot{
+  width: clamp(3px, 0.3vw, 600px);   
+  height: clamp(3px, 0.3vw, 600px);
+  background:#a4a29b;
+  border-radius:50%;
+}
+
+@media(max-width: 786px){
+
+    
+/* ---------------- TEXT SIDE ---------------- */
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+/* Title */
+.movie-info h3 {
+  margin: 0;
+  font-size: clamp(3px,5vw,45px);
+  color: #000000;
+}
+/* Meta */
+.movie-meta {
+  margin-top: 5px;
+  font-size: 30px;
+  color: #0000008A;
+  display: flex;
+  gap: 8px;
+  flex-wrap:wrap;
+  font-size: clamp(10px, 3vw, 900px);
+  justify-content: flex-start;
+}
+.movie-genres{
+margin-top: 5px;
+}
+.movie-genres span {
+  font-size: clamp(10px, 3vw, 600px);   
+}
+.dot{
+  width: clamp(3px, 0.3vw, 600px);   
+  height: clamp(3px, 0.3vw, 600px);
+  background:#a4a29b;
+  border-radius:50%;
+}
+
+}
+</style>
+</body>
+</html>
