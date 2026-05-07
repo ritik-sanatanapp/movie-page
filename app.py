@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for
 from pymongo import MongoClient
 import os
 import json
+from flask import abort
 
 app = Flask(__name__)
 MOVIES_DIR = "movies"
@@ -9,36 +10,28 @@ MOVIES_DIR = "movies"
 client = MongoClient("mongodb://localhost:27017/")
 db = client["mydb"]
 movies_collection  = db["movies"]
+common_collection = db["common"] 
 
 
 # ------------------ LOAD COMMON ------------------
 def load_common():
-    with open("./static/common/common.json", encoding="utf-8") as f:
-        return json.load(f)
+    return common_collection.find_one({}, {"_id": 0})
 
 # ------------------ LOAD MOVIE -------------------
-# def load_movie(movie_id, lang="en"):
-#     """Load movie JSON for given ID and language"""
-#     path = f'{MOVIES_DIR}/{movie_id}/data/{lang}.json'
-#     if not os.path.exists(path):
-#         path = f'{MOVIES_DIR}/{movie_id}/data/en.json' 
-#     with open(path, encoding="utf-8") as f:
-#         return json.load(f)
-
 def load_movie(movie_id, lang="en"):
+    full_id = f"{movie_id}-{lang}"
     movie = movies_collection.find_one(
-        {"id": movie_id},
+        {"id": full_id},
         {"_id": 0}
     )
-
     if not movie:
-        return None
+        # fallback to English
+        movie = movies_collection.find_one(
+            {"id": f"{movie_id}-en"},
+            {"_id": 0}
+        )
 
-    # optional: language handling (if you store translations)
-    if "lang" in movie and lang in movie["lang"]:
-        return movie["lang"][lang]
-
-    return movie
+    return movie if movie else {}
 
 # ------------------ LANGUAGE ---------------------
 def get_lang():
@@ -54,12 +47,30 @@ def home():
     movie = load_movie("kalyug", lang)  # default movie
     return render_template("movie.html", common=common, movie=movie, lang=lang)
 
+
+# ------------------ ALL MOVIE PAGE -------------------
+@app.route("/movies")
+def all_movies():
+    lang = get_lang()
+    common = load_common()
+    movies = list(movies_collection.find(
+        {"id": {"$regex": f"-{lang}$"}},   # ✅ match kalyug-hi
+        {"_id": 0}
+    ))
+    return render_template(
+        "all_movies.html",
+        common=common,
+        movies=movies,
+        lang=lang
+    )
 # ------------------ MOVIE PAGE -------------------
-@app.route("/movie/<movie_id>")
+@app.route("/movies/<movie_id>")
 def movie_page(movie_id):
     lang = get_lang()
     common = load_common()
     movie = load_movie(movie_id, lang)
+    if not movie:
+        abort(404)  
     return render_template(
     "movie.html",
     common=common,  
@@ -68,4 +79,4 @@ def movie_page(movie_id):
 )
 # ------------------ RUN --------------------------
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5050, debug=True)
+    app.run(host="0.0.0.0", port=5050, debug=True)  
