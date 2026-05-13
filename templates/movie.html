@@ -10,10 +10,10 @@
     <link rel="preload" as="image" 
       href="{{ movie.hero.cover_low }}"
       media="(max-width: 768px)">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/sections.css') }}">  
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/movies-base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/movies-layout.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/movies-components.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/movies-sections.css') }}">  
     
 </head>
 <body>
@@ -48,7 +48,7 @@
     <nav class="header-links">
       <div class="header-language">
         <a href="{{ request.path }}?lang={{ 'hi' if lang == 'en' else 'en' }}">
-          {{ common.site.language_button.text[lang] }}
+          {{ common.site.language_button.text}}
           <picture>
             <source 
               media="(max-width: 768px)" 
@@ -82,7 +82,7 @@
       <!-- Desktop -->
       <img 
         src="{{ movie.hero.cover }}"
-        alt="{{ movie.title[lang] }} Hero Cover"
+        alt="{{ movie.title }} Hero Cover"
         fetchpriority="high">
     </picture>
     <picture>
@@ -92,7 +92,7 @@
       <img 
         src="{{ movie.hero.title_image }}"
         class="trailer-overlay"
-        alt="{{ movie.title[lang] }} Title Image">
+        alt="{{ movie.title }} Title Image">
     </picture>
     <div class="trailer-watchnow">
       <div class="trailer-watchnow-title">  
@@ -323,7 +323,7 @@
   {{ movie.ui_titles.stream_now }}</div>
 <section class="stream-section">
   <p class="info-value">
-    {{ common.stream.text[lang] }}</p>
+    {{ common.stream.text }}</p>
   <div class="stream-buttons-wrapper">
     <div class="stream-buttons-android">
         <a href="{{ common.stream.google_play.link }}" target="_blank">
@@ -368,7 +368,7 @@
             <div class="credit-item">
         
               <div class="info-label">
-                {{ credit.title[lang] if credit.title is mapping else credit.title }}
+               {{ credit.title }}
               </div>
               <div class="info-value">
                 {{ credit.names}}
@@ -459,8 +459,8 @@
 <!-- FOOTER SECTION -->
 <footer class="footer">
   <div id="page-links" class="footer-nav">
-    {% for link in common.footer.links %}
-      <a href="{{ link.url }}">{{ link.name[lang] }}</a>
+    {% for key, link in common.footer.links.items() %}
+      <a href="{{ link.url }}">{{ link.text }}</a>
       {% if not loop.last %}
         <div class="divider"></div>
       {% endif %}

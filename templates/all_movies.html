@@ -5,10 +5,12 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/sections.css') }}">  
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/movies-base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/movies-layout.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/movies-components.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/movies-sections.css') }}">  
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/movies-allmovies.css') }}">  
+
     
 </head>
 <body>
@@ -30,7 +32,7 @@
     <nav class="header-links">
       <div class="header-language">
         <a href="{{ request.path }}?lang={{ 'hi' if lang == 'en' else 'en' }}">
-          {{ common.site.language_button.text[lang] }}
+          {{ common.site.language_button.text }}
           <picture>
             <source 
               media="(max-width: 768px)" 
@@ -44,19 +46,40 @@
       <!-- HOME -->
       <div class="header-home">
         <a href="{{ common.site.home_link }}" class="home">
-            Home
+            {{ movies[0].ui.home }}
         </a>
       </div>
     </nav>
   </div>
 </header>
 
-<div class="allmovies-heading">Movies</div>
+
+
+
+<div class="allmovies-head">
+  <picture class="allmovies-bg">
+    <source media="(max-width: 768px)" srcset="https://web-data.sanatanapp.in/all_movies/allmovies_low.webp">
+    <img src="https://web-data.sanatanapp.in/all_movies/allmovies.webp" alt="Movies Background">
+  </picture>
+  <div class="allmovies-heading">
+  {{ "Movies" if lang == "en" else "फ़िल्में" }}
+</div>
+  <div class="allmovies-subheading">
+  {{
+    "Movies move us like nothing else can, whether they’re scary, funny, dramatic, romantic or anywhere in-between. So many titles, so much to experience."
+    if lang == "en"
+    else
+    "फ़िल्में हमें किसी और चीज़ की तरह प्रभावित करती हैं — चाहे वे डरावनी हों, मज़ेदार, भावुक, रोमांटिक या कुछ भी अलग। इतनी सारी कहानियाँ, इतना कुछ अनुभव करने के लिए।"
+  }}
+</div>
+</div>
+
+
 
 <div class="allmovies-container">
   {% for movie in movies %}
     <div class="movie-card">
-      <a href="{{ url_for('movie_page', movie_id=movie.id.split('-')[0]) }}">
+      <a href="{{ url_for('movie_page', movie_id=movie._id.split('-')[0]) }}">
         <!-- Poster -->
         <img src="{{ movie.movie.poster }}" alt="{{ movie.movie.title }}">
 
@@ -83,165 +106,89 @@
 
 
 
-<style>
-.allmovies-heading {
-  text-align: center;
-  font-size: clamp(18px, 5vw, 280px);
-  font-weight: 600;
-  margin: 20px 0;
-  color: #000000;
-}
-
-/* ---------------- CONTAINER (COLUMN) ---------------- */
-.allmovies-container {
-  display: flex;
-  flex-direction: column; /* 👈 vertical list */
-  gap: 50px;
-  padding-top: 50px;
-  padding-left: 250px;
-  padding-right: 250px;
-}
-
-@media(max-width: 786px){
-.allmovies-container {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(20px, 5vw, 50px);
-  padding-top: clamp(8px, 3vw, 50px);
-  padding-left: clamp(8px, 5vw, 250px);
-  padding-right: clamp(8px, 5vw, 250px);
-}
-}
-
-/* ---------------- CARD (ROW INSIDE) ---------------- */
-.movie-card a {
-  display: flex;              /* 👈 row inside */
-  flex-direction: row;
-  gap: 15px;
-  text-decoration: none;
-  color: inherit;
-  background: #efebeb;
-  border-radius: 10px;
-  padding: 30px;
-  align-items: center;
-  transition: transform 0.2s ease;
-}
-
-.movie-card a:hover {
-  transform: scale(1.02);
-}
-
-/* ---------------- IMAGE ---------------- */
-.movie-card img {
-  width: 250px;
-  height: auto;
-  border-radius: 8px;
-  flex-shrink: 0;
-}
-
-@media(max-width: 786px){
-
-.movie-card a {
-  display: flex;              /* 👈 row inside */
-  flex-direction: row;
-  gap: 15px;
-  text-decoration: none;
-  color: inherit;
-  background: #efebeb;
-  border-radius: 10px;
-  padding: 20px;
-  align-items: center;
-  transition: transform 0.2s ease;
-}
-.movie-card img {
-  width: clamp(10px, 30vw,200px);
-  height: auto;
-  border-radius: 8px;   
-  flex-shrink: 0;
-}
-}
+<!-- DOWNLOAD SECTION -->
+ <section class="download-section">
+  <p>{{ movies[0].ui.available_now }}</p>
+  <div id="download-button-android">
+    <a href="{{ common.stream.google_play.link }}" target="_blank">
+            <picture>
+              <source 
+                media="(max-width: 768px)" 
+                srcset="{{ common.stream.google_play.image }}">
+            
+              <img 
+                src="{{ common.stream.google_play.image }}" 
+                alt="Google Play"  loading="lazy">
+            </picture>
+          </a>
+  </div>
+  <div id="download-button-ios">
+    <a href="{{ common.stream.app_store.link }}" target="_blank">
+            <picture>
+              <source 
+                media="(max-width: 768px)" 
+                srcset="{{ common.stream.app_store.image }}">
+            
+              <img 
+                src="{{ common.stream.app_store.image }}" 
+                alt="App Store" loading="lazy">
+            </picture>
+          </a>
+  </div>
+</section>
 
 
 
 
-/* ---------------- TEXT SIDE ---------------- */
-.movie-info {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-/* Title */
-.movie-info h3 {
-  margin: 0;
-  font-size: 45px;
-  color: #000000;
-}
-/* Meta */
-.movie-meta {
-  margin-top: 20px;
-  font-size: 30px;
-  color: #0000008A;
-  display: flex;
-  gap: 8px;
-  flex-wrap:wrap;
-  font-size: clamp(10px, 1vw, 900px);
-  justify-content: flex-start;
-}
-.movie-genres{
-margin-top: 20px;
-font-size:  clamp(10px, 1.2vw, 600px); 
-}
-.movie-genres span {
-  font-size: clamp(10px, 1.2vw, 600px);   
-  color:#131110;
-}
-.dot{
-  width: clamp(3px, 0.3vw, 600px);   
-  height: clamp(3px, 0.3vw, 600px);
-  background:#a4a29b;
-  border-radius:50%;
-}
+<!-- FOOTER SECTION -->
+<footer class="footer">
+  <div id="page-links" class="footer-nav">
+    {% for key, link in common.footer.links.items() %}
+      <a href="{{ link.url }}">{{ link.text }}</a>
+      {% if not loop.last %}
+        <div class="divider"></div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div id="bottom-logo-container" class="footer-logo">
+    <a href="{{ common.site.home_link }}">
+      <picture>
+        <source media="(max-width: 768px)" 
+                srcset="{{ common.site.logo }}">
+        
+        <img src="{{ common.site.logo }}"
+             alt="{{ common.site.name }} Logo" id="bottom-logo" loading="lazy">
+      </picture>
+    </a>
+  </div>
+  <div id="follow-us-container" class="footer-social">
+    <small>{{ movies[0].ui.follow_us}}</small>
+    <div id="social-media-links">
+      {% for key, social in common.social.items() %}
+          <a href="{{ social.url }}" target="_blank">
+            <picture>
+          <!-- Mobile -->
+          <source 
+            media="(max-width: 768px)" 
+            srcset="{{ social.icon }}">
+          <!-- Desktop -->
+          <img 
+            src="{{ social.icon }}" 
+            alt="{{ key }}" loading="lazy">
+        </picture>
+          </a>
+      {% endfor %}
+    </div>
+  </div>
+</footer>
 
-@media(max-width: 786px){
 
-    
-/* ---------------- TEXT SIDE ---------------- */
-.movie-info {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-/* Title */
-.movie-info h3 {
-  margin: 0;
-  font-size: clamp(3px,5vw,45px);
-  color: #000000;
-}
-/* Meta */
-.movie-meta {
-  margin-top: 5px;
-  font-size: 30px;
-  color: #0000008A;
-  display: flex;
-  gap: 8px;
-  flex-wrap:wrap;
-  font-size: clamp(10px, 3vw, 900px);
-  justify-content: flex-start;
-}
-.movie-genres{
-margin-top: 5px;
-}
-.movie-genres span {
-  font-size: clamp(10px, 3vw, 600px);   
-}
-.dot{
-  width: clamp(3px, 0.3vw, 600px);   
-  height: clamp(3px, 0.3vw, 600px);
-  background:#a4a29b;
-  border-radius:50%;
-}
 
-}
-</style>
+<!-- BELOW FOOTER SECTION -->
+<div class="below-footer">
+  <small id="copyright-text" style="background: white;">© 2025 Sanatanapp Private Limited All Rights Reserved.</small>
+  </div>
+
+
 </body>
 </html>
